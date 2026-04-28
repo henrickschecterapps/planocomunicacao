@@ -1,82 +1,106 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    const navTimeline = document.getElementById('navTimeline');
-    const main = document.getElementById('main');
+    const navItems = document.querySelectorAll('.hub-nav-item');
+    const stage = document.getElementById('stage');
+    const progressInner = document.getElementById('progressInner');
 
-    // Generate Sidebar Items
-    sections.forEach((section, i) => {
-        const label = section.getAttribute('data-label');
-        const navItem = document.createElement('div');
-        navItem.className = 'nav-item' + (i === 0 ? ' active' : '');
-        navItem.innerHTML = label;
-        
-        navItem.addEventListener('click', () => {
-            section.scrollIntoView({ behavior: 'smooth' });
+    // 1. Navigation Logic
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const targetId = item.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
         });
-        
-        navTimeline.appendChild(navItem);
     });
 
-    const navItems = document.querySelectorAll('.nav-item');
-
-    // Intersection Observer for Timeline/Active state
+    // 2. Intersection Observer for Active State & Animations
     const observerOptions = {
-        root: main,
-        threshold: 0.6
+        root: stage,
+        threshold: 0.5
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Update Slide Classes
-                sections.forEach(s => s.classList.remove('active'));
-                entry.target.classList.add('active');
+                const id = entry.target.id;
+                
+                // Update Nav
+                navItems.forEach(item => {
+                    item.classList.toggle('active', item.getAttribute('data-target') === id);
+                    if (item.getAttribute('data-target') === id) {
+                        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
 
-                // Update Sidebar
+                // Run Section Animations
+                animateSection(entry.target);
+                
+                // Update Progress
                 const index = Array.from(sections).indexOf(entry.target);
-                navItems.forEach(item => item.classList.remove('active'));
-                navItems[index].classList.add('active');
-
-                // Auto-scroll sidebar to keep active item in view
-                navItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-                // Trigger Content Animations
-                animateSlide(entry.target);
+                const progress = ((index + 1) / sections.length) * 100;
+                progressInner.style.height = `${progress}%`;
             }
         });
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
 
-    function animateSlide(section) {
-        const elements = section.querySelectorAll('h1, h2, .glass-panel, .table-wrapper, .grid-2, .grid-3');
-        
-        anime({
-            targets: elements,
-            translateY: [20, 0],
-            opacity: [0, 1],
-            delay: anime.stagger(80),
-            easing: 'easeOutExpo',
-            duration: 800
+    function animateSection(section) {
+        const title = section.querySelector('h1, h2');
+        const cards = section.querySelectorAll('.bento-card, .data-table-container');
+        const elements = section.querySelectorAll('p, .tag, tr');
+
+        anime.set([title, cards, elements], { opacity: 0 });
+
+        const tl = anime.timeline({
+            easing: 'easeOutQuart'
         });
+
+        tl.add({
+            targets: title,
+            translateX: [-30, 0],
+            opacity: [0, 1],
+            duration: 800
+        })
+        .add({
+            targets: cards,
+            translateY: [40, 0],
+            opacity: [0, 1],
+            scale: [0.98, 1],
+            delay: anime.stagger(150),
+            duration: 1000
+        }, '-=600')
+        .add({
+            targets: elements,
+            opacity: [0, 1],
+            translateY: [10, 0],
+            delay: anime.stagger(50),
+            duration: 600
+        }, '-=800');
     }
 
-    // Keyboard Navigation
+    // 3. Sync Scroll for manual navigation
+    stage.addEventListener('scroll', () => {
+        // Observer handles the state update
+    });
+
+    // 4. Keyboard Support
     window.addEventListener('keydown', (e) => {
-        const active = document.querySelector('section.active');
-        const index = Array.from(sections).indexOf(active);
+        const activeItem = document.querySelector('.hub-nav-item.active');
+        const targetId = activeItem ? activeItem.getAttribute('data-target') : 's1';
+        const currentIndex = Array.from(sections).indexOf(document.getElementById(targetId));
 
         if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-            if (index < sections.length - 1) {
-                sections[index + 1].scrollIntoView({ behavior: 'smooth' });
+            if (currentIndex < sections.length - 1) {
+                sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
             }
         } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-            if (index > 0) {
-                sections[index - 1].scrollIntoView({ behavior: 'smooth' });
+            if (currentIndex > 0) {
+                sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
             }
         }
     });
 
-    // Initial animation for first slide
-    animateSlide(sections[0]);
+    // Initial Trigger
+    animateSection(sections[0]);
 });
