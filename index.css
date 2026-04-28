@@ -425,7 +425,7 @@ h2 {
     margin-bottom: 2rem;
     color: white;
     position: relative;
-    display: inline-block;
+    display: block; /* Corrigido de inline-block para evitar colisões com badges */
 }
 
 h2 span { color: var(--accent); }
