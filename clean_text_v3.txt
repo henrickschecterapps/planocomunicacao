@@ -1,0 +1,720 @@
+﻿Plano de ComunicaÃ§Ã£o
+Arquitetura de comunicaÃ§Ã£o digital da Tripla para 2026, consolidando a estratÃ©gia de crescimento orgÃ¢nico com a abordagem Sales-Led Growth (SLG). O plano integra trÃªs frentes comerciais complementares â€” GeraÃ§Ã£o de Demanda, Sales Enablement e Account-Based Marketing (ABM) â€” orientado pela Matriz GTM 2026 da Tripla, que classifica cada soluÃ§Ã£o por complexidade e nÃ­vel de conscientizaÃ§Ã£o do mercado.
+
+Premissa Central
+Todo ativo de conteÃºdo deve estar ancorado em pelo menos uma frente GTM e mapeado Ã  Matriz de InteligÃªncia de Mercado. SoluÃ§Ãµes em zonas diferentes exigem abordagens de conteÃºdo completamente distintas.
+
+1. Contexto e posicionamento de mercado
+O mercado de TI B2B brasileiro atravessa um ciclo de maturidade acelerada. Compradores pesquisam, comparam e eliminam fornecedores antes do primeiro contato comercial. A percepÃ§Ã£o de autoridade tÃ©cnica tornou-se fator eliminatÃ³rio â€” nÃ£o diferencial.
+
+A Tripla opera em mÃºltiplos segmentos com diferentes graus de maturidade de mercado, o que exige uma estratÃ©gia de conteÃºdo segmentada por zona â€” nÃ£o uma abordagem Ãºnica. A Matriz GTM 2026 Ã© a bÃºssola que orienta essa segmentaÃ§Ã£o.
+
+Desafio de Mercado
+Resposta EstratÃ©gica da Tripla
+Compradores desinformados sobre soluÃ§Ãµes complexas de TI
+TriplaCast e Whitepapers tÃ©cnicos para educaÃ§Ã£o de mercado
+Alta concorrÃªncia por atenÃ§Ã£o orgÃ¢nica
+SEO + distribuiÃ§Ã£o multicanal orquestrada
+Ciclos de venda longos com mÃºltiplos decisores
+ABM com Account Mapping e conteÃºdo personalizado por conta
+ObjeÃ§Ãµes tÃ©cnicas e de preÃ§o no fechamento
+Battle Cards, Cases de Sucesso e One-Pages executivos
+Dificuldade de escalar para novos mercados
+Sales-Led Growth com Social Selling de executivos como advisors
+
+2. Objetivos EstratÃ©gicos
+#
+Objetivo
+DescriÃ§Ã£o
+01
+Autoridade TÃ©cnica
+Posicionar a Tripla como referÃªncia em TI B2B nacional e internacional.
+02
+EducaÃ§Ã£o de Mercado
+Criar consciÃªncia sobre dores latentes dos ICPs com conteÃºdo profundo.
+03
+Crescimento OrgÃ¢nico
+Maximizar alcance e conversÃ£o sem dependÃªncia de trÃ¡fego pago.
+04
+Sales Enablement
+Municiar o time comercial com ativos que aceleram fechamento enterprise.
+05
+ExpansÃ£o ABM
+Aumentar ticket mÃ©dio e LTV em contas estratÃ©gicas identificadas.
+
+3. Matriz GTM 2026 â€” InteligÃªncia de Mercado
+A Matriz GTM 2026 classifica todo o portfÃ³lio da Tripla em quatro zonas estratÃ©gicas, cruzando dois eixos: Complexidade da SoluÃ§Ã£o (Alta / MÃ©dia / Baixa) e NÃ­vel de ConscientizaÃ§Ã£o do Mercado (Baixa / MÃ©dia / Alta). Cada zona determina a abordagem de conteÃºdo, os formatos prioritÃ¡rios e o tipo de nutriÃ§Ã£o comercial adequado.
+
+Zona
+Nome
+Complexidade
+ConscientizaÃ§Ã£o
+Abordagem de ConteÃºdo
+Z1
+EvangelizaÃ§Ã£o
+Alta
+Baixa
+Educar o mercado sobre o problema antes de apresentar a soluÃ§Ã£o
+Z2
+EspecializaÃ§Ã£o
+Alta / MÃ©dia
+MÃ©dia
+Demonstrar profundidade tÃ©cnica e diferenciaÃ§Ã£o competitiva
+Z3
+Captura
+MÃ©dia / Baixa
+Alta
+Capturar demanda existente com proposta clara e CTA direto
+Z4
+Passivo
+Baixa
+Baixa
+ManutenÃ§Ã£o de presenÃ§a â€” baixo investimento de conteÃºdo
+
+Z1 â€” EvangelizaÃ§Ã£o
+Complexidade: Alta complexidade / Baixa conscientizaÃ§Ã£oAbordagem de conteÃºdo: EducaÃ§Ã£o profunda de mercado
+O mercado ainda nÃ£o sabe que tem esse problema. O conteÃºdo precisa criar o problema antes de oferecer a soluÃ§Ã£o.
+SoluÃ§Ãµes nesta zona:
+GovernanÃ§a AlgorÃ­tmica
+Huawei â€” Redes
+BESS â€” Energia
+OT Security
+Assessment de Rede
+DRP â€” Digital Risk Protection
+NOC â€” Monitoramento
+COaaS
+
+Pilar GTM
+Formatos PrioritÃ¡rios
+CadÃªncia
+Objetivo
+GeraÃ§Ã£o de Demanda
+TriplaCast com episÃ³dios tÃ©cnicos sobre o tema, Whitepapers que nomeiam o problema, Artigos de blog SEO educacionais, Checklists de diagnÃ³stico
+Alta (2â€“3 conteÃºdos/mÃªs por soluÃ§Ã£o)
+Criar consciÃªncia do problema e capturar leads que pesquisam sintomas, nÃ£o soluÃ§Ãµes
+Sales Enablement
+Battle Cards com argumentaÃ§Ã£o consultiva, One-Pages que traduzem complexidade tÃ©cnica para linguagem de negÃ³cio
+Mensal
+Preparar o time para ciclos longos de educaÃ§Ã£o do comprador
+ABM
+Whitepapers verticais por segmento (ex.: OT Security para indÃºstria), SequÃªncia de email com conteÃºdo educacional progressivo
+Sob demanda por conta
+Criar urgÃªncia em contas-alvo que ainda nÃ£o reconhecem o gap
+
+Z2 â€” EspecializaÃ§Ã£o
+Complexidade: Alta/MÃ©dia complexidade / MÃ©dia conscientizaÃ§Ã£o    Abordagem de conteÃºdo: DiferenciaÃ§Ã£o tÃ©cnica e prova de capacidade
+O mercado sabe que precisa de algo, mas ainda estÃ¡ avaliando abordagens. O conteÃºdo precisa demonstrar superioridade tÃ©cnica.
+SoluÃ§Ãµes nesta zona:
+MicrossegmentaÃ§Ã£o
+Dahua â€” Videomonitoramento IA
+SASE â€” ZTNA/SWG
+ResiliÃªncia CibernÃ©tica
+TPRM
+IAM / IGA
+Teramind
+DPO as a Service
+Work Intelligence
+SOC / MDR
+PAM
+TRISKY DaaS Dedicado
+WAF â€” Firewall de AplicaÃ§Ãµes
+
+Pilar GTM
+Formatos PrioritÃ¡rios
+CadÃªncia
+Objetivo
+GeraÃ§Ã£o de Demanda
+Whitepapers comparativos de abordagens, TriplaCast com especialistas em cada soluÃ§Ã£o, Artigos SEO de meio de funil ("como escolher", "melhores prÃ¡ticas"), Assessments interativos de maturidade
+Alta (2â€“3 conteÃºdos/mÃªs)
+Capturar leads em avaliaÃ§Ã£o ativa e posicionar a Tripla como a escolha tÃ©cnica mais sÃ³lida
+Sales Enablement
+Battle Cards comparativos com concorrentes, Cases de Sucesso com mÃ©tricas tÃ©cnicas, ApresentaÃ§Ã£o Comercial com prova de capacidade
+Quinzenal
+Eliminar objeÃ§Ãµes tÃ©cnicas e acelerar o ciclo de avaliaÃ§Ã£o
+ABM
+Deck por conta com anÃ¡lise do ambiente do cliente, ConteÃºdo vertical por segmento (financeiro, saÃºde, indÃºstria)
+Por conta Tier 1
+Posicionar a Tripla como parceiro estratÃ©gico antes da RFP
+
+Z3 â€” Captura
+Complexidade: MÃ©dia/Baixa complexidade / Alta conscientizaÃ§Ã£o    Abordagem de conteÃºdo: SEO de intenÃ§Ã£o + captura direta
+O mercado jÃ¡ sabe o que precisa e estÃ¡ procurando fornecedores. O conteÃºdo precisa ser encontrÃ¡vel, direto e com CTA claro.
+SoluÃ§Ãµes nesta zona:
+AIOps & Cost Intelligence
+EDR / XDR
+MultiCloud
+TRISKY SaaS
+MSS â€” Managed Security
+MSS Â· Cross-sell RÃ¡pido
+
+Pilar GTM
+Formatos PrioritÃ¡rios
+CadÃªncia
+Objetivo
+GeraÃ§Ã£o de Demanda
+Artigos SEO de fundo de funil ("melhor soluÃ§Ã£o X", "como contratar Y"), Landing Pages com proposta de valor direta, One-Pages executivos, Cases de Sucesso com ROI documentado
+MÃ©dia (1â€“2 conteÃºdos/mÃªs â€” foco em qualidade e ranqueamento)
+Ser encontrado por quem jÃ¡ estÃ¡ decidindo e converter com CTAs de alto impacto
+Sales Enablement
+Cases de Sucesso com comparativo de custo/benefÃ­cio, Battle Cards para defesa de preÃ§o, Pitch rÃ¡pido
+Mensal
+Fechar rÃ¡pido â€” o comprador estÃ¡ pronto; o time precisa remover fricÃ§Ãµes
+ABM
+SequÃªncia de email curta e direta (3â€“5 emails) para contas identificadas, Deck por conta simplificado
+Por conta Tier 1
+Capturar contas que estÃ£o em processo de cotaÃ§Ã£o ativo
+
+Z4 â€” Passivo
+Complexidade: Baixa complexidade / Baixa conscientizaÃ§Ã£o    Abordagem de conteÃºdo: PresenÃ§a mÃ­nima â€” sem investimento ativo de conteÃºdo
+SoluÃ§Ãµes de suporte ou complementares sem prioridade de conteÃºdo ativo. MantÃ©m presenÃ§a mÃ­nima e aguarda gatilhos de demanda.
+SoluÃ§Ãµes nesta zona:
+(sem soluÃ§Ãµes mapeadas no portfÃ³lio atual)
+
+4. Perfis de DecisÃ£o â€” ICP
+A comunicaÃ§Ã£o da Tripla Ã© direcionada a dois perfis primÃ¡rios de compradores. A abordagem varia conforme a zona GTM da soluÃ§Ã£o em pauta.
+
+Perfil
+Cargo / Papel
+Motivador Principal
+Principal ObjeÃ§Ã£o
+Ativos PrioritÃ¡rios
+Canal
+CTO
+ValidaÃ§Ã£o TÃ©cnica â€” responsÃ¡vel por seguranÃ§a, conformidade e integridade operacional
+Mitigar riscos e garantir robustez do ecossistema tecnolÃ³gico
+"NÃ£o temos capacidade interna para absorver a soluÃ§Ã£o"
+Whitepapers tÃ©cnicos, TriplaCast, Battle Cards
+LinkedIn + Blog SEO
+CEO / COO
+DecisÃ£o de NegÃ³cio â€” focado em ROI, vantagem competitiva e escala comercial
+Parceiros estratÃ©gicos que impulsionem resultados financeiros mensurÃ¡veis
+"O investimento nÃ£o estÃ¡ claro / nÃ£o vejo o retorno"
+Cases de Sucesso, One-Pages executivos, Deck ABM por conta
+ABM + Social Selling
+
+Personas por Zona GTM
+Z1 (EvangelizaÃ§Ã£o): foco no CTO â€” precisa entender o problema antes de aprovar orÃ§amento. Z2 (EspecializaÃ§Ã£o): ambos os perfis ativos â€” CTO avalia a soluÃ§Ã£o, CEO avalia o parceiro. Z3 (Captura): foco no CEO/COO â€” decisÃ£o rÃ¡pida baseada em ROI e confianÃ§a. Z4: sem abordagem ativa.
+
+5. Matriz de InfluÃªncia na jornada do cliente
+Cada etapa da jornada possui um mindset dominante do comprador e ativos estratÃ©gicos correspondentes. A prioridade de cada ativo varia conforme a zona GTM da soluÃ§Ã£o.
+
+#
+Etapa
+Mindset do Comprador
+Ativos EstratÃ©gicos
+01
+Awareness
+"Tenho gaps ocultos na minha infraestrutura?"
+â€¢ Checklist de DiagnÃ³stico
+â€¢ Blog SEO â€” Topic Clusters
+â€¢ Postagens LinkedIn
+â€¢ Tripla na MÃ­dia
+02
+EducaÃ§Ã£o
+"Quais sÃ£o as melhores prÃ¡ticas do mercado?"
+â€¢ TriplaCast â€” episÃ³dios tÃ©cnicos
+â€¢ Whitepapers aprofundados
+â€¢ Artigos de especialista
+â€¢ Newsletter Semanal
+03
+ConfianÃ§a
+"A Tripla jÃ¡ resolveu isso antes?"
+â€¢ Cases de Sucesso
+â€¢ Assessment Interativo
+â€¢ Battle Cards
+â€¢ Aspas e depoimentos de clientes
+04
+Fechamento
+"Este investimento gera retorno real?"
+â€¢ Deck ABM por Conta
+â€¢ One-Page Executivo
+â€¢ Pitch Documentado
+â€¢ Account Mapping
+05
+ExpansÃ£o
+"Quais os prÃ³ximos passos na evoluÃ§Ã£o?"
+â€¢ ConteÃºdo Vertical por segmento
+â€¢ Newsletter de Clientes
+â€¢ Roadmaps de TI
+â€¢ Social Selling contÃ­nuo
+
+6. Estrutura de conteÃºdo por Pilar GTM
+Pilar GTM
+Objetivo
+Ativos e Materiais
+ICP PrimÃ¡rio
+Etapa da Jornada
+GeraÃ§Ã£o de Demanda
+Atrair novos leads e educar topo e meio de funil.
+TriplaCast, Whitepapers, Blog SEO, Checklists, Assessments, One-Pages.
+CTO / Gerente de TI
+Awareness + EducaÃ§Ã£o
+Sales Enablement
+Habilitar vendas para conversÃ£o e defesa de margem em ciclos enterprise.
+Cases de Sucesso, Battle Cards, E-books Internos, Pitch Documentado, ApresentaÃ§Ã£o Comercial.
+CEO / COO + CTO
+ConfianÃ§a + Fechamento
+ABM Intelligence
+Expandir e converter contas estratÃ©gicas de alto valor com abordagem personalizada.
+Deck por Conta, Account Mapping, ConteÃºdo Vertical, SequÃªncia de Email Personalizado.
+Todos (por conta)
+Fechamento + ExpansÃ£o
+
+7. EstratÃ©gia por canal
+7.1 LinkedIn â€” Autoridade B2B e Social Selling
+Canal central para comunicaÃ§Ã£o institucional e tÃ©cnica. Executivos atuam como advisors tÃ©cnicos ativos, especialmente para soluÃ§Ãµes Z1 e Z2 que exigem construÃ§Ã£o de confianÃ§a antes da abordagem comercial.
+
+Formato
+FrequÃªncia
+Objetivo
+KPI Principal
+Cortes de TriplaCast (vÃ­deo curto)
+1x / semana
+Autoridade tÃ©cnica + alcance orgÃ¢nico
+VisualizaÃ§Ãµes + Salvamentos
+Artigos de lideranÃ§a
+1x / semana
+Posicionamento de executivos como referÃªncias do setor
+ImpressÃµes + ComentÃ¡rios qualificados
+Social Selling â€” Perfis Executivos
+1x / semana
+Amplificar Cases e Enablement em redes pessoais como advisors tÃ©cnicos
+Alcance de 2Âº e 3Âº grau
+CarrossÃ©is educacionais
+1x / semana
+EducaÃ§Ã£o de mercado â€” foco em soluÃ§Ãµes Z1/Z2
+Saves + Cliques no CTA
+DistribuiÃ§Ã£o de Whitepapers
+1x / mÃªs
+Captura de leads Tier 1 qualificados
+FormulÃ¡rios preenchidos + MQLs
+Enquetes e perguntas
+2x / mÃªs
+Engajamento e coleta de dados para novos conteÃºdos
+Taxa de resposta
+
+7.2 Instagram â€” Relacionamento, Cultura e Micro-Learning
+Canal humano da Tripla. Complementa o LinkedIn com bastidores, cultura e micro-learning â€” especialmente Ãºtil para humanizar soluÃ§Ãµes de alta complexidade (Z1/Z2).
+
+Formato
+FrequÃªncia
+Objetivo
+KPI Principal
+Reels de bastidores / Equipe
+1x / semana
+Humanizar a marca â€” cultura e employer branding
+ReproduÃ§Ãµes + Compartilhamentos
+Reels de Micro-Learning (Checklists)
+1x / semana
+VersÃ£o visual e rÃ¡pida dos conteÃºdos tÃ©cnicos
+Salvamentos + Alcance
+Stories com enquetes
+3x / semana
+Coletar dados sobre dores da audiÃªncia para novos Whitepapers
+Respostas + VisualizaÃ§Ãµes
+Conquistas e eventos da equipe
+Sob demanda
+ReforÃ§o de cultura e atraÃ§Ã£o de talentos
+MenÃ§Ãµes + Novos seguidores
+
+7.3 Blog e SEO â€” IntenÃ§Ã£o comercial e trÃ¡fego orgÃ¢nico
+A estratÃ©gia de SEO Ã© orientada pela zona GTM de cada soluÃ§Ã£o. SoluÃ§Ãµes Z1 exigem conteÃºdo que nomeia o problema; soluÃ§Ãµes Z3 exigem conteÃºdo de intenÃ§Ã£o direta.
+
+Tipo de ConteÃºdo
+Volume Mensal
+Zona GTM
+CTA PrimÃ¡rio
+Artigos Pilar (Topic Cluster)
+1 / mÃªs
+Z1 e Z2 â€” educaÃ§Ã£o profunda
+Download de Whitepaper
+Artigos de suporte (Cluster)
+2 / mÃªs
+Z1/Z2 â€” variaÃ§Ãµes semÃ¢nticas e long-tail educacional
+Solicitar Assessment
+Artigos de IntenÃ§Ã£o (fundo de funil)
+2 / mÃªs
+Z3 â€” captura de busca ativa
+Agendar Conversa
+Cases de Sucesso (versÃ£o blog)
+1 / mÃªs
+Z2/Z3 â€” prova social e conversÃ£o
+Agendar Conversa
+Artigos de Especialista (SEO + LinkedIn)
+2 / mÃªs
+Z1/Z2 â€” autoridade tÃ©cnica + backlinks
+Newsletter ou Whitepaper
+Guest Posts / Co-marketing
+1 / trimestre
+Todos â€” link building e nova audiÃªncia
+ReferÃªncia ao site da Tripla
+
+7.4 Email Marketing â€” nutriÃ§Ã£o, automaÃ§Ã£o e ABM
+Tipo
+FrequÃªncia
+Segmento
+Objetivo
+Newsletter Semanal
+1x / semana
+Toda a base
+Curadoria dos melhores conteÃºdos + posicionamento de autoridade
+SequÃªncia de Boas-vindas
+AutomÃ¡tico
+Novos leads
+Apresentar Tripla e gerar primeira conversÃ£o em 14 dias
+SequÃªncia de NutriÃ§Ã£o MQL
+AutomÃ¡tico
+Leads qualificados (MQL)
+Conduzir ao pedido de Assessment ou reuniÃ£o comercial
+Disparo ABM Personalizado
+Sob demanda
+Contas-alvo (Tier 1)
+ConteÃºdo vertical e personalizado para acelerar decisÃ£o
+Newsletter de clientes
+1x / mÃªs
+Clientes ativos
+ExpansÃ£o de LTV com Roadmaps e novas soluÃ§Ãµes
+
+8. CatÃ¡logo de ativos de conteÃºdo
+8.1 GeraÃ§Ã£o de Demanda
+Ativo
+DescriÃ§Ã£o
+Zona GTM PrimÃ¡ria
+Profundidade
+TriplaCast (episÃ³dios)
+Podcast/videocast com educaÃ§Ã£o tÃ©cnica e especializada. Base de cortes e distribuiÃ§Ã£o multicanal.
+Z1 / Z2
+Alta
+Whitepapers TÃ©cnicos
+Material denso para captura e qualificaÃ§Ã£o de leads Tier 1. Gated com formulÃ¡rio.
+Z1 / Z2
+Alta
+Assessments Interativos
+DiagnÃ³sticos que revelam gaps imediatos no ambiente do cliente.
+Z2 / Z3
+MÃ©dia
+Checklists de DiagnÃ³stico
+Ativos de entrada (topo de funil). Alta viralidade e fÃ¡cil consumo.
+Z1
+Baixa
+Blog SEO â€” Topic Clusters
+Artigos organizados em clusters temÃ¡ticos para domÃ­nio orgÃ¢nico por Ã¡rea de soluÃ§Ã£o.
+Todas
+MÃ©dia
+
+8.2 Sales Enablement
+Ativo
+DescriÃ§Ã£o
+UsuÃ¡rio Principal
+Zona GTM
+Battle Cards EstratÃ©gicos
+Guias tÃ¡ticos de diferenciaÃ§Ã£o competitiva para uso interno da forÃ§a de vendas.
+Vendedores
+Z2 / Z3
+Cases de Sucesso
+Provas sociais documentadas com resultados reais, mÃ©tricas e depoimentos.
+Vendedores + PÃ³s-venda
+Z2 / Z3
+Pitch Documentado
+Script de apresentaÃ§Ã£o comercial padronizado com argumentos tÃ©cnicos e de negÃ³cio por segmento.
+Vendedores
+Z2 / Z3
+One-Page Executivo
+Resumo de 1 pÃ¡gina com proposta de valor para CEO/COO. Foco em ROI e diferencial.
+Vendedores (C-Level)
+Z3
+ApresentaÃ§Ã£o Comercial
+Deck padrÃ£o para reuniÃµes de qualificaÃ§Ã£o e proposta.
+Vendedores
+Todas
+
+8.3 ABM Intelligence
+Ativo
+DescriÃ§Ã£o
+Uso
+Zona GTM
+Account Mapping
+Mapeamento granular do comitÃª de compras: decisores, influenciadores e bloqueadores.
+EstratÃ©gia por conta
+Z2 / Z3
+Deck por Conta
+ApresentaÃ§Ã£o com personalizaÃ§Ã£o integral da proposta tÃ©cnica usando dados da empresa-alvo.
+ReuniÃ£o de fechamento
+Z2 / Z3
+ConteÃºdo Vertical
+Materiais exclusivos para nichos de mercado especÃ­ficos (ex.: financeiro, saÃºde, indÃºstria).
+NutriÃ§Ã£o de segmento
+Z1 / Z2
+SequÃªncia de Email ABM
+CadÃªncia personalizada de 5â€“8 emails para contas Tier 1, mapeada ao comitÃª de compra.
+ProspecÃ§Ã£o ativa
+Todas
+
+9. Fluxo de produÃ§Ã£o e distribuiÃ§Ã£o
+O modelo Content-as-a-System garante que cada ativo seja produzido uma vez e distribuÃ­do de forma adaptada em mÃºltiplos canais. O briefing deve obrigatoriamente indicar a zona GTM da soluÃ§Ã£o.
+
+Etapa
+ResponsÃ¡vel
+EntregÃ¡vel
+1. Briefing e Pauta
+Carolina Cunha
+Doc de briefing: persona, pilar GTM, zona da Matriz, etapa da jornada e CTA definidos
+2. ProduÃ§Ã£o do Ativo Base
+Henrique + Sarah
+Whitepaper, roteiro do TriplaCast ou rascunho do artigo
+3. RevisÃ£o TÃ©cnica
+Especialista designado
+Material aprovado com precisÃ£o tÃ©cnica garantida
+4. AdaptaÃ§Ã£o Multicanal
+Designers + Henrique
+VersÃµes para LinkedIn, Instagram, Blog e Email
+5. AprovaÃ§Ã£o Final
+Carolina Cunha
+Checklist de aprovaÃ§Ã£o assinado
+6. PublicaÃ§Ã£o Agendada
+Henrique + Sarah
+PublicaÃ§Ã£o nos canais no horÃ¡rio de maior impacto
+7. Monitoramento e AnÃ¡lise
+Henrique
+RelatÃ³rio de performance (30/60/90 dias)
+
+HorÃ¡rios de Maior Impacto
+LinkedIn: TerÃ§as e quartas, 8hâ€“10h e 17hâ€“19h. Instagram: TerÃ§as, quintas e sextas, 12hâ€“13h e 19hâ€“21h. Email: TerÃ§as e quintas, 9hâ€“10h. Blog: impacto via SEO, nÃ£o horÃ¡rio.
+
+9.1 CalendÃ¡rio Editorial â€” semanal
+Dia
+LinkedIn
+Instagram
+Blog / Email
+Segunda
+Artigo de LideranÃ§a de Pensamento
+Stories com enquete da semana
+â€”
+TerÃ§a
+Corte de TriplaCast (vÃ­deo)
+Reel de bastidores ou equipe
+PublicaÃ§Ã£o de artigo SEO
+Quarta
+Carrossel Educacional
+Stories: dica rÃ¡pida
+Email de nutriÃ§Ã£o (sequÃªncia automÃ¡tica)
+Quinta
+Case de Sucesso ou dado de mercado
+Reel de micro-learning (checklist)
+â€”
+Sexta
+Social Selling â€” executivos compartilham
+Stories: encerramento da semana
+Newsletter (se dia de disparo)
+
+10. Plano de ativaÃ§Ã£o tÃ¡tico â€” 4 Fases
+A implementaÃ§Ã£o segue uma sequÃªncia de quatro fases, priorizando soluÃ§Ãµes Z3 (captura imediata) nas fases iniciais enquanto constrÃ³i a infraestrutura de evangelizaÃ§Ã£o para Z1/Z2.
+
+Fase 01: PreparaÃ§Ã£o
+EntregÃ¡vel: Setup Baseline completo e validado
+Auditoria completa dos ativos de conteÃºdo existentes e mapeamento por zona GTM
+Setup de KPIs e Analytics (GA4, LinkedIn Analytics, CRM)
+CriaÃ§Ã£o do Manual de Tom de Voz e Identidade Editorial
+Mapeamento inicial das contas ABM Tier 1 (top 10â€“20 contas) com classificaÃ§Ã£o por zona
+Treinamento da equipe comercial no uso de ativos de Enablement por zona GTM
+
+Fase 02: LanÃ§amento
+EntregÃ¡vel: LanÃ§amento ativo e com primeiros dados
+TriplaCast: primeiros 3 episÃ³dios focados em soluÃ§Ãµes Z1/Z2 (EvangelizaÃ§Ã£o e EspecializaÃ§Ã£o)
+PublicaÃ§Ã£o do 1Âº Whitepaper com campanha de captura de leads (prioridade Z1)
+Blog: 3 primeiros artigos pilares SEO (1 para Z1, 1 para Z2, 1 para Z3)
+Treinamento de Sales Enablement com Battle Cards e Cases iniciais para Z3 (Captura rÃ¡pida)
+InÃ­cio das sequÃªncias de email de boas-vindas e nutriÃ§Ã£o
+
+Fase 03: Escalabilidade
+EntregÃ¡vel: Escalabilidade com ABM e SEO ativos
+InÃ­cio das campanhas ABM com Decks e Account Mapping para contas Tier 1 (foco Z2/Z3)
+ExpansÃ£o do SEO: artigos de suporte + long-tail por zona GTM
+AtivaÃ§Ã£o do Social Selling sistemÃ¡tico pelos executivos
+LanÃ§amento do Assessment Interativo como gerador de leads MQL (Z2/Z3)
+Newsletter semanal ativa para toda a base
+
+Fase 04: OtimizaÃ§Ã£o
+EntregÃ¡vel: Plano de expansÃ£o e otimizaÃ§Ã£o consolidado
+RevisÃ£o de ROI por canal e por zona GTM com base nos primeiros 3 meses
+Ajuste de ICP por conversÃ£o real (validaÃ§Ã£o das personas por zona)
+Plano de expansÃ£o em clientes ativos (LTV + upsell via Newsletter de Clientes)
+AvaliaÃ§Ã£o de novos mercados geogrÃ¡ficos
+RevisÃ£o trimestral estratÃ©gica com comercial e lideranÃ§a
+
+11. EstratÃ©gia ABM Intelligence
+O ABM combina inteligÃªncia de conta, personalizaÃ§Ã£o de conteÃºdo e alinhamento profundo entre marketing e vendas. A zona GTM da soluÃ§Ã£o define a abordagem de cada sequÃªncia.
+
+11.1 Processo de seleÃ§Ã£o e priorizaÃ§Ã£o
+Etapa
+AÃ§Ã£o
+ResponsÃ¡vel
+IdentificaÃ§Ã£o
+Time comercial lista contas com base em tamanho, segmento e fit com soluÃ§Ãµes da Tripla.
+Vendas
+QualificaÃ§Ã£o
+Contas ranqueadas por potencial de receita, estÃ¡gio do funil e probabilidade de conversÃ£o.
+Marketing + Vendas
+Account Mapping
+Mapeamento granular do comitÃª de compras: decisores, influenciadores e bloqueadores.
+Marketing
+PriorizaÃ§Ã£o
+Top 10â€“20 contas recebem tratamento ABM completo. Demais entram em nutriÃ§Ã£o.
+Carolina Cunha
+
+11.2 Materiais ABM por EstÃ¡gio
+EstÃ¡gio
+Objetivo
+ConteÃºdo Personalizado
+Awareness
+Aparecer no radar da conta-alvo
+Posts segmentados no LinkedIn + Artigos de tendÃªncia do setor especÃ­fico da conta
+EducaÃ§Ã£o
+Demonstrar profundidade tÃ©cnica relevante ao contexto da conta
+Whitepaper aplicado ao segmento + TriplaCast com temÃ¡tica alinhada
+ConfianÃ§a
+Provar que a Tripla jÃ¡ resolveu o problema antes
+Case de sucesso de empresa do mesmo porte/setor + Depoimentos de clientes
+Fechamento
+Eliminar objeÃ§Ãµes e acelerar a decisÃ£o
+Deck ABM por Conta + One-Page Executivo + Account Mapping + Battle Card
+ExpansÃ£o
+Aumentar LTV e transformar cliente em case
+RelatÃ³rio de valor entregue + Convite para participar do TriplaCast como case
+
+12. Indicadores de sucesso (KPIs)
+Todos os KPIs sÃ£o revisados mensalmente por Henrique e consolidados em relatÃ³rio trimestral com a lideranÃ§a e o time comercial.
+
+Topo de Funil â€” Alcance e Visibilidade
+
+Indicador
+Meta
+Ferramenta
+Pilar GTM
+ImpressÃµes no LinkedIn
++15% mÃªs a mÃªs
+LinkedIn Analytics
+GeraÃ§Ã£o de Demanda
+Alcance orgÃ¢nico no Instagram
++10% mÃªs a mÃªs
+Meta Business Suite
+GeraÃ§Ã£o de Demanda
+SessÃµes orgÃ¢nicas no Blog
++20% trimestral
+Google Analytics 4
+GeraÃ§Ã£o de Demanda
+Palavras-chave na 1Âª pÃ¡gina do Google
++5 palavras/mÃªs
+Semrush
+GeraÃ§Ã£o de Demanda
+
+Meio de Funil â€” Engajamento e Qualidade
+
+Indicador
+Meta
+Ferramenta
+Pilar GTM
+ComentÃ¡rios de C-Level/decisores no LinkedIn
+20+ / mÃªs
+LinkedIn Analytics + Manual
+GeraÃ§Ã£o de Demanda
+Downloads de Whitepapers
+50+ / mÃªs
+CRM
+GeraÃ§Ã£o de Demanda
+Assessments concluÃ­dos
+15+ / mÃªs
+CRM + GA4
+GeraÃ§Ã£o de Demanda
+Taxa de abertura de Email
+>30%
+RD Station 
+Enablement
+Taxa de clique (CTR) no Email
+>5%
+RD Station 
+Enablement
+
+Fundo de Funil â€” ConversÃ£o e Receita
+
+Indicador
+Meta
+Ferramenta
+Pilar GTM
+SolicitaÃ§Ãµes de Assessment / DiagnÃ³stico
+10+ / mÃªs
+CRM + GA4
+GeraÃ§Ã£o de Demanda
+MQLs gerados por conteÃºdo
+20+ / mÃªs
+CRM
+Enablement
+Taxa de conversÃ£o MQL â†’ SQL
+>25%
+CRM
+ABM + Enablement
+Contas ABM ativas em pipeline
+5â€“10 contas
+CRM
+ABM
+Velocidade do ciclo de venda
+ReduÃ§Ã£o de 15% trimestral
+CRM
+Enablement + ABM
+Receita influenciada por conteÃºdo
+Meta definida com comercial
+CRM + AtribuiÃ§Ã£o
+Todos
+
+13. Stack de Ferramentas
+Categoria
+Ferramenta
+Finalidade
+SEO e Palavras-chave
+Semrush ou Ahrefs
+Topic Clusters, monitoramento de rankings, anÃ¡lise de concorrÃªncia e backlinks
+Analytics Web
+Google Analytics 4 + Search Console
+TrÃ¡fego orgÃ¢nico, comportamento e indexaÃ§Ã£o de conteÃºdo
+GestÃ£o de Social Media
+mLabs ou Etus
+Agendamento, publicaÃ§Ã£o e relatÃ³rios de redes sociais
+Design e CriaÃ§Ã£o Visual
+Adobe
+PeÃ§as visuais para todos os canais e formatos
+VÃ­deo e EdiÃ§Ã£o
+Adobe Premiere, After Effects
+EdiÃ§Ã£o de Reels, cortes de TriplaCast e vÃ­deos do LinkedIn
+GestÃ£o de Projetos / Editorial
+ClickUp
+CalendÃ¡rio editorial, briefings e acompanhamento de tarefas
+InteligÃªncia de Contas (ABM)
+LinkedIn Sales Navigator
+Account Mapping, Social Selling e monitoramento de contas Tier 1
+
+14. GovernanÃ§a e Ciclo de RevisÃ£o
+14.1 CadÃªncia de RevisÃµes
+Ciclo
+Participantes
+Pauta Principal
+Semanal
+Henrique + Sarah + Carol
+Ajustes tÃ¡ticos e performance dos Ãºltimos 7 dias
+Mensal
+Time de Marketing
+KPIs mensais, calendÃ¡rio editorial, novos conteÃºdos e prioridades ABM
+Trimestral
+Marketing + Comercial + LideranÃ§a
+RevisÃ£o estratÃ©gica, ROI por canal, ajuste de ICP, prioridades do prÃ³ximo trimestre
+
+14.2 CritÃ©rios para RevisÃ£o Antecipada
+O plano deve ser revisado fora do ciclo trimestral se qualquer um dos eventos abaixo ocorrer:
+
+MudanÃ§a no posicionamento, portfÃ³lio ou precificaÃ§Ã£o das soluÃ§Ãµes da Tripla
+Reposicionamento de soluÃ§Ãµes na Matriz GTM (mudanÃ§a de zona)
+Entrada de novo concorrente relevante ou mudanÃ§a de estratÃ©gia de concorrente existente
+Queda de mais de 30% em qualquer KPI de topo de funil por dois meses consecutivos
+MudanÃ§a de algoritmo relevante nas plataformas principais (LinkedIn ou Google)
+Oportunidade de co-marketing, parceria estratÃ©gica ou expansÃ£o geogrÃ¡fica nÃ£o prevista
+Feedback sistemÃ¡tico do time comercial sobre lacunas nos ativos de Enablement
+

@@ -3,618 +3,559 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tripla | Plano Estratégico 2026</title>
+    <title>Tripla | Strategy Control Center</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
-    <div class="bg-mesh"></div>
-    <div class="noise"></div>
-    <div class="progress-bar"><div class="progress-inner" id="progressInner"></div></div>
+    <div class="bg-stage">
+        <div class="glow" style="top: -10%; left: -10%;"></div>
+        <div class="glow" style="bottom: -10%; right: -10%; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);"></div>
+    </div>
 
-    <aside class="hub-sidebar">
-        <div class="hub-header">
-            <div class="hub-logo">TRIPLA</div>
-        </div>
-        <nav class="hub-nav" id="hubNav">
-            <div class="nav-group">
-                <span class="nav-group-label">ESTRATÉGIA</span>
-                <div class="hub-nav-item active" data-target="s1">Capa</div>
-                <div class="hub-nav-item" data-target="s2">Sumário Executivo</div>
-                <div class="hub-nav-item" data-target="s3">Contexto e Posicionamento</div>
-                <div class="hub-nav-item" data-target="s4">Objetivos Estratégicos</div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <div style="width: 32px; height: 32px; background: var(--primary); border-radius: 8px;"></div>
+                TRIPLA
             </div>
-            <div class="nav-group">
-                <span class="nav-group-label">MATRIZ GTM</span>
-                <div class="hub-nav-item" data-target="s5">Definição das Zonas</div>
-                <div class="hub-nav-item" data-target="s6">Ações Z1: Evangelização</div>
-                <div class="hub-nav-item" data-target="s7">Ações Z2: Especialização</div>
-                <div class="hub-nav-item" data-target="s8">Ações Z3: Captura</div>
-            </div>
-            <div class="nav-group">
-                <span class="nav-group-label">EXECUÇÃO</span>
-                <div class="hub-nav-item" data-target="s9">Personas (ICP)</div>
-                <div class="hub-nav-item" data-target="s10">Matriz de Influência</div>
-                <div class="hub-nav-item" data-target="s11">Estratégia Social</div>
-                <div class="hub-nav-item" data-target="s12">Estratégia Digital</div>
-            </div>
-            <div class="nav-group">
-                <span class="nav-group-label">CATÁLOGO DE ATIVOS</span>
-                <div class="hub-nav-item" data-target="s13">Geração de Demanda</div>
-                <div class="hub-nav-item" data-target="s14">Sales Enablement</div>
-                <div class="hub-nav-item" data-target="s15">ABM Intelligence</div>
-            </div>
-            <div class="nav-group">
-                <span class="nav-group-label">OPERAÇÃO</span>
-                <div class="hub-nav-item" data-target="s16">Fluxo de Produção</div>
-                <div class="hub-nav-item" data-target="s17">Calendário Semanal</div>
-                <div class="hub-nav-item" data-target="s18">Plano de Ativação</div>
-            </div>
-            <div class="nav-group">
-                <span class="nav-group-label">INTELIGÊNCIA</span>
-                <div class="hub-nav-item" data-target="s19">Processo ABM</div>
-                <div class="hub-nav-item" data-target="s20">Materiais ABM</div>
-                <div class="hub-nav-item" data-target="s21">KPIs: Topo e Meio</div>
-                <div class="hub-nav-item" data-target="s22">KPIs: Fundo e ROI</div>
-                <div class="hub-nav-item" data-target="s23">Stack de Ferramentas</div>
-            </div>
-            <div class="nav-group">
-                <span class="nav-group-label">GOVERNANÇA</span>
-                <div class="hub-nav-item" data-target="s24">Revisão e Controle</div>
-            </div>
-        </nav>
-    </aside>
+            
+            <nav class="nav-group">
+                <span class="nav-label">Estratégia</span>
+                <div class="nav-item active" data-target="panel-capa">Visão Geral</div>
+                <div class="nav-item" data-target="panel-contexto">Contexto e Objetivos</div>
+            </nav>
 
-    <main class="stage" id="stage">
-        <!-- Slide 01: Capa -->
-        <section id="s1">
-            <div class="content-window">
-                <div class="tag">Estratégia 2026</div>
-                <h1>PLANO DE<br><span style="color: var(--primary-sky);">COMUNICAÇÃO</span><br>DIGITAL</h1>
-                <p style="font-size: 1.5rem; color: var(--text-secondary); max-width: 800px; margin-top: 2rem; line-height: 1.4;">
-                    Arquitetura de crescimento orgânico e <strong>Sales-Led Growth</strong> para posicionamento de autoridade B2B nacional e internacional.
-                </p>
-                <div style="margin-top: 4rem; display: flex; gap: 2rem; align-items: center;">
-                    <div style="height: 1px; flex: 1; background: var(--border-glass);"></div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--primary-sky);">TRIPLA © 2026</div>
+            <nav class="nav-group">
+                <span class="nav-label">Matriz GTM</span>
+                <div class="nav-item" data-target="panel-gtm-hub">A Matriz 2026</div>
+                <div class="nav-item" data-target="panel-gtm-z1">Z1 — Evangelização</div>
+                <div class="nav-item" data-target="panel-gtm-z2">Z2 — Especialização</div>
+                <div class="nav-item" data-target="panel-gtm-z3">Z3 — Captura</div>
+                <div class="nav-item" data-target="panel-gtm-z4">Z4 — Passivo</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Execução</span>
+                <div class="nav-item" data-target="panel-personas">Personas (ICP)</div>
+                <div class="nav-item" data-target="panel-jornada">Jornada do Cliente</div>
+                <div class="nav-item" data-target="panel-pilares">Pilares GTM</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Canais</span>
+                <div class="nav-item" data-target="panel-social">LinkedIn & Instagram</div>
+                <div class="nav-item" data-target="panel-digital">Blog, SEO & Email</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Catálogo de Ativos</span>
+                <div class="nav-item" data-target="panel-ativos">Ativos Completos</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Operação</span>
+                <div class="nav-item" data-target="panel-workflow">Fluxo & Calendário</div>
+                <div class="nav-item" data-target="panel-ativacao">Plano de Ativação</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Inteligência</span>
+                <div class="nav-item" data-target="panel-abm">Processo ABM</div>
+                <div class="nav-item" data-target="panel-kpis">Indicadores (KPIs)</div>
+                <div class="nav-item" data-target="panel-stack">Ferramentas</div>
+            </nav>
+
+            <nav class="nav-group">
+                <span class="nav-label">Governança</span>
+                <div class="nav-item" data-target="panel-governanca">Revisão e Controle</div>
+            </nav>
+        </aside>
+
+        <main class="main-viewport">
+            <!-- Panel: Capa -->
+            <div class="content-panel active" id="panel-capa">
+                <span class="badge" style="color: var(--accent);">Estratégia Digital 2026</span>
+                <h1 style="margin-top: 1rem;">PLANO DE<br>COMUNICAÇÃO <span style="color: var(--primary);">DIGITAL</span></h1>
+                <p class="text-lead">Arquitetura de comunicação digital da Tripla para 2026, consolidando a estratégia de crescimento orgânico com a abordagem <strong>Sales-Led Growth (SLG)</strong>.</p>
+                <div class="card" style="margin-top: 2rem;">
+                    <h3>PREMISSA CENTRAL</h3>
+                    <p style="font-style: italic; color: var(--text-dim);">"Todo ativo de conteúdo deve estar ancorado em pelo menos uma frente GTM e mapeado à Matriz de Inteligência de Mercado. Soluções em zonas diferentes exigem abordagens de conteúdo completamente distintas."</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 02: Sumário -->
-        <section id="s2">
-            <div class="content-window">
-                <h2>SUMÁRIO <span>EXECUTIVO</span></h2>
-                <div class="bento-card">
-                    <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;">
-                        Este documento define a arquitetura de comunicação digital da Tripla para 2026, integrando Geração de Demanda, Sales Enablement e ABM, orientados pela Matriz GTM 2026.
-                    </p>
-                    <div style="padding: 2rem; border-left: 4px solid var(--primary-royal); background: rgba(0, 85, 212, 0.05); border-radius: 0 16px 16px 0;">
-                        <h3 style="margin-bottom: 0.5rem; font-size: 0.9rem;">PREMISSA CENTRAL</h3>
-                        <p style="font-style: italic; color: #fff;">"Todo ativo de conteúdo deve estar ancorado em pelo menos uma frente GTM e mapeado à Matriz de Inteligência de Mercado. Conteúdo sem finalidade comercial clara não entra no plano."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 03: Contexto -->
-        <section id="s3">
-            <div class="content-window">
-                <h2>1. CONTEXTO E <span>POSICIONAMENTO</span></h2>
-                <div class="bento-card">
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">O mercado de TI B2B brasileiro atravessa um ciclo de maturidade acelerada. A percepção de autoridade técnica tornou-se fator eliminatório na escolha de parceiros estratégicos.</p>
-                    <div class="data-table-container">
-                        <table>
-                            <thead>
-                                <tr><th>Desafio de Mercado</th><th>Resposta da Tripla</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Compradores desinformados sobre soluções complexas</td><td>TriplaCast e Whitepapers técnicos para educação profunda.</td></tr>
-                                <tr><td>Alta concorrência por atenção orgânica</td><td>SEO + distribuição multicanal orquestrada e recorrente.</td></tr>
-                                <tr><td>Ciclos de venda longos com múltiplos decisores</td><td>ABM com Account Mapping personalizado para cada conta.</td></tr>
-                                <tr><td>Objeções técnicas e de preço no fechamento</td><td>Battle Cards e Cases de Sucesso para prova social e técnica.</td></tr>
-                                <tr><td>Dificuldade de escalar para novos mercados</td><td>Social Selling de executivos como advisors (Liderança de Pensamento).</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 04: Objetivos -->
-        <section id="s4">
-            <div class="content-window">
-                <h2>2. OBJETIVOS <span>ESTRATÉGICOS</span></h2>
+            <!-- Panel: Contexto -->
+            <div class="content-panel" id="panel-contexto">
+                <h2>CONTEXTO & <span>OBJETIVOS</span></h2>
                 <div class="bento-grid">
-                    <div class="bento-card">
-                        <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                        <h3>AUTORIDADE TÉCNICA</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">TriplaCast, Whitepapers, Artigos SEO Profundos e Cases de Sucesso.</p>
+                    <div class="card" style="grid-column: span 12;">
+                        <h3>1. Contexto e posicionamento de mercado</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 2rem;">O mercado de TI B2B brasileiro atravessa um ciclo de maturidade acelerada. Compradores pesquisam, comparam e eliminam fornecedores antes do primeiro contato comercial. A percepção de autoridade técnica tornou-se fator eliminatório — não diferencial.</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead><tr><th>Desafio de Mercado</th><th>Resposta Estratégica da Tripla</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Compradores desinformados sobre soluções complexas de TI</td><td>TriplaCast e Whitepapers técnicos para educação de mercado</td></tr>
+                                    <tr><td>Alta concorrência por atenção orgânica</td><td>SEO + distribuição multicanal orquestrada</td></tr>
+                                    <tr><td>Ciclos de venda longos com múltiplos decisores</td><td>ABM com Account Mapping e conteúdo personalizado por conta</td></tr>
+                                    <tr><td>Objeções técnicas e de preço no fechamento</td><td>Battle Cards, Cases de Sucesso e One-Pages executivos</td></tr>
+                                    <tr><td>Dificuldade de escalar para novos mercados</td><td>Sales-Led Growth com Social Selling de executivos como advisors</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="bento-card">
-                        <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
-                        <h3>EDUCAÇÃO DE MERCADO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Checklists, Assessments Interativos e Vídeos de Micro-learning.</p>
-                    </div>
-                    <div class="bento-card">
-                        <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
-                        <h3>CRESCIMENTO ORGÂNICO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Otimização SEO, Social Selling de executivos e Newsletter semanal.</p>
-                    </div>
-                    <div class="bento-card">
-                        <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
-                        <h3>SALES ENABLEMENT</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Battle Cards, Decks Customizados e Documentos de Prova de ROI.</p>
+                    <div class="card" style="grid-column: span 12; margin-top: 2rem;">
+                        <h3>2. Objetivos Estratégicos</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead><tr><th>#</th><th>Objetivo</th><th>Descrição</th></tr></thead>
+                                <tbody>
+                                    <tr><td>01</td><td>Autoridade Técnica</td><td>Posicionar a Tripla como referência em TI B2B nacional e internacional.</td></tr>
+                                    <tr><td>02</td><td>Educação de Mercado</td><td>Criar consciência sobre dores latentes dos ICPs com conteúdo profundo.</td></tr>
+                                    <tr><td>03</td><td>Crescimento Orgânico</td><td>Maximizar alcance e conversão sem dependência de tráfego pago.</td></tr>
+                                    <tr><td>04</td><td>Sales Enablement</td><td>Municiar o time comercial com ativos que aceleram fechamento enterprise.</td></tr>
+                                    <tr><td>05</td><td>Expansão ABM</td><td>Aumentar ticket médio e LTV em contas estratégicas identificadas.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 05: Matriz GTM -->
-        <section id="s5">
-            <div class="content-window">
+            <!-- Panel: Matriz GTM Hub -->
+            <div class="content-panel" id="panel-gtm-hub">
                 <h2>3. MATRIZ <span>GTM 2026</span></h2>
+                <p class="text-lead">A bÚssola que orienta a segmentação por complexidade (Alta/Média/Baixa) e conscientização (Baixa/Média/Alta).</p>
                 <div class="bento-grid">
-                    <div class="bento-card" style="border-top: 4px solid #ef4444;">
-                        <h3 style="color: #ef4444;">Z1: EVANGELIZAÇÃO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Alta Complexidade / Baixa Conscientização. Foco em educar sobre o problema.</p>
-                        <p style="font-size: 0.75rem; color: #ef4444;"><strong>Soluções:</strong> Governança, Huawei, BESS, OT Security, DRP, NOC, COaaS.</p>
+                    <div class="card" style="grid-column: span 3;">
+                        <span class="badge zone-z1">Z1</span>
+                        <h3 style="margin-top: 1rem;">Evangelização</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Educar o mercado sobre o problema antes da solução.</p>
                     </div>
-                    <div class="bento-card" style="border-top: 4px solid #f59e0b;">
-                        <h3 style="color: #f59e0b;">Z2: ESPECIALIZAÇÃO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Alta-Média Complexidade / Média Conscientização. Foco em diferenciação.</p>
-                        <p style="font-size: 0.75rem; color: #f59e0b;"><strong>Soluções:</strong> Microssegmentação, SASE, IAM/IGA, SOC/MDR, PAM, Trisky DaaS.</p>
+                    <div class="card" style="grid-column: span 3;">
+                        <span class="badge zone-z2">Z2</span>
+                        <h3 style="margin-top: 1rem;">Especialização</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Demonstrar profundidade técnica e diferenciação.</p>
                     </div>
-                    <div class="bento-card" style="border-top: 4px solid #10b981;">
-                        <h3 style="color: #10b981;">Z3: CAPTURA</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Média-Baixa Complexidade / Alta Conscientização. Foco em conversão direta.</p>
-                        <p style="font-size: 0.75rem; color: #10b981;"><strong>Soluções:</strong> AIOps, EDR/XDR, MultiCloud, TRISKY SaaS, MSS.</p>
+                    <div class="card" style="grid-column: span 3;">
+                        <span class="badge zone-z3">Z3</span>
+                        <h3 style="margin-top: 1rem;">Captura</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Capturar demanda existente com CTA direto.</p>
                     </div>
-                    <div class="bento-card" style="border-top: 4px solid #6b7280;">
-                        <h3 style="color: #6b7280;">Z4: PASSIVO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Baixa Complexidade / Baixa Conscientização. Aguarda gatilhos de demanda.</p>
-                        <p style="font-size: 0.75rem; color: #6b7280;"><strong>Soluções:</strong> Serviços de baixa complexidade ou commodities.</p>
+                    <div class="card" style="grid-column: span 3;">
+                        <span class="badge" style="color: var(--text-dim);">Z4</span>
+                        <h3 style="margin-top: 1rem;">Passivo</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-dim);">Manutenção de presença com baixo investimento.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 06: Z1 -->
-        <section id="s6">
-            <div class="content-window">
-                <h2>Z1 — <span>EVANGELIZAÇÃO</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Z1 -->
+            <div class="content-panel" id="panel-gtm-z1">
+                <span class="badge zone-z1">Z1 — Evangelização</span>
+                <h2 style="margin-top: 1rem;">ABORDAGEM DE <span>CONTEÚDO</span></h2>
+                <p class="text-lead">O mercado ainda não sabe que tem esse problema. O conteúdo precisa criar o problema antes de oferecer a solução.</p>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>Soluções nesta zona:</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Governança Algorítmica, Huawei — Redes, BESS — Energia, OT Security, Assessment de Rede, DRP — Digital Risk Protection, NOC — Monitoramento, COaaS.</p>
+                </div>
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr>
-                        </thead>
+                        <thead><tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr></thead>
                         <tbody>
-                            <tr><td>Geração de Demanda</td><td>TriplaCast, Whitepapers, Blog SEO Educacional, Checklists</td><td>2–3 p/ mês</td><td>Criar consciência do problema latente.</td></tr>
-                            <tr><td>Sales Enablement</td><td>Battle Cards consultivos, One-Pages técnicos</td><td>Mensal</td><td>Preparar time para ciclos longos de venda.</td></tr>
-                            <tr><td>ABM</td><td>Whitepapers verticais, Email progressivo</td><td>Sob demanda</td><td>Criar urgência em contas-alvo específicas.</td></tr>
+                            <tr><td>Geração de Demanda</td><td>TriplaCast (ep. técnicos), Whitepapers (nomeiam o problema), Blog SEO educacional, Checklists de diagnóstico</td><td>Alta (2–3 conteÚdos/mês por solução)</td><td>Criar consciência do problema e capturar leads que pesquisam sintomas</td></tr>
+                            <tr><td>Sales Enablement</td><td>Battle Cards consultivos, One-Pages (tradução técnica p/ negócio)</td><td>Mensal</td><td>Preparar o time para ciclos longos de educação</td></tr>
+                            <tr><td>ABM</td><td>Whitepapers verticais (ex.: OT Security p/ indÚstria), Email progressivo</td><td>Sob demanda por conta</td><td>Criar urgência em contas-alvo que não reconhecem o gap</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 07: Z2 -->
-        <section id="s7">
-            <div class="content-window">
-                <h2>Z2 — <span>ESPECIALIZAÇÃO</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Z2 -->
+            <div class="content-panel" id="panel-gtm-z2">
+                <span class="badge zone-z2">Z2 — Especialização</span>
+                <h2 style="margin-top: 1rem;">ABORDAGEM DE <span>CONTEÚDO</span></h2>
+                <p class="text-lead">O mercado sabe que precisa de algo, mas avalia abordagens. O conteúdo demonstra superioridade técnica.</p>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>Soluções nesta zona:</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Microssegmentação, Dahua, SASE — ZTNA/SWG, Resiliência Cibernética, TPRM, IAM/IGA, Teramind, DPO as a Service, Work Intelligence, SOC/MDR, PAM, TRISKY DaaS Dedicado, WAF.</p>
+                </div>
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr>
-                        </thead>
+                        <thead><tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr></thead>
                         <tbody>
-                            <tr><td>Geração de Demanda</td><td>Comparativos, TriplaCast, SEO de meio de funil, Assessments</td><td>2–3 p/ mês</td><td>Diferenciação técnica e prova de capacidade.</td></tr>
-                            <tr><td>Sales Enablement</td><td>Battle Cards comparativos, Cases de Sucesso</td><td>Quinzenal</td><td>Eliminar objeções técnicas específicas.</td></tr>
-                            <tr><td>ABM</td><td>Deck por Conta, Conteúdo vertical setorial</td><td>Tier 1</td><td>Posicionar como parceiro estratégico.</td></tr>
+                            <tr><td>Geração de Demanda</td><td>Whitepapers comparativos, TriplaCast Especialistas, SEO meio funil, Assessments interativos</td><td>Alta (2–3 conteÚdos/mês)</td><td>Posicionar a Tripla como a escolha técnica mais sólida</td></tr>
+                            <tr><td>Sales Enablement</td><td>Battle Cards comparativos, Cases de Sucesso (métricas), Apres. Comercial</td><td>Quinzenal</td><td>Eliminar objeções técnicas e acelerar o ciclo</td></tr>
+                            <tr><td>ABM</td><td>Deck por conta (análise ambiente), Conteúdo vertical setorial</td><td>Por conta Tier 1</td><td>Posicionar como parceiro estratégico antes da RFP</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 08: Z3 -->
-        <section id="s8">
-            <div class="content-window">
-                <h2>Z3 — <span>CAPTURA</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Z3 -->
+            <div class="content-panel" id="panel-gtm-z3">
+                <span class="badge zone-z3">Z3 — Captura</span>
+                <h2 style="margin-top: 1rem;">ABORDAGEM DE <span>CONTEÚDO</span></h2>
+                <p class="text-lead">O mercado jÁ sabe o que precisa. O conteúdo precisa ser encontrÁvel, direto e com CTA claro.</p>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>Soluções nesta zona:</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">AIOps & Cost Intelligence, EDR / XDR, MultiCloud, TRISKY SaaS, MSS — Managed Security, MSS · Cross-sell RÁpido.</p>
+                </div>
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr>
-                        </thead>
+                        <thead><tr><th>Pilar GTM</th><th>Formatos Prioritários</th><th>Cadência</th><th>Objetivo</th></tr></thead>
                         <tbody>
-                            <tr><td>Geração de Demanda</td><td>SEO fundo de funil, Landing Pages, Cases ROI</td><td>1–2 p/ mês</td><td>Capturar demanda ativa de busca.</td></tr>
-                            <tr><td>Sales Enablement</td><td>Battle Cards de preço, Pitch rápido</td><td>Mensal</td><td>Remover fricção no fechamento financeiro.</td></tr>
-                            <tr><td>ABM</td><td>Sequência de Email curta (3–5), Deck simplificado</td><td>Tier 1</td><td>Conversão rápida de contas ativas.</td></tr>
+                            <tr><td>Geração de Demanda</td><td>Artigos SEO fundo funil, Landing Pages diretas, One-Pages, Cases ROI</td><td>Média (1–2 conteÚdos/mês)</td><td>Converter com CTAs de alto impacto</td></tr>
+                            <tr><td>Sales Enablement</td><td>Cases custo/benefício, Battle Cards preço, Pitch rÁpido</td><td>Mensal</td><td>Fechar rÁpido — remover fricções finais</td></tr>
+                            <tr><td>ABM</td><td>Sequência email curta (3–5), Deck por conta simplificado</td><td>Por conta Tier 1</td><td>Capturar contas em processo de cotação ativo</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 09: Personas -->
-        <section id="s9">
-            <div class="content-window">
-                <h2>4. PERSONAS <span>(ICP)</span></h2>
+            <!-- Panel: Z4 -->
+            <div class="content-panel" id="panel-gtm-z4">
+                <span class="badge" style="color: var(--text-dim);">Z4 — Passivo</span>
+                <h2 style="margin-top: 1rem;">ABORDAGEM DE <span>CONTEÚDO</span></h2>
+                <p class="text-lead">Presença mÍnima — sem investimento ativo de conteúdo. Soluções complementares.</p>
+                <div class="card">
+                    <h3>Status:</h3>
+                    <p style="color: var(--text-dim);">(Sem soluções mapeadas no portfÓlio atual)</p>
+                </div>
+            </div>
+
+            <!-- Panel: Personas -->
+            <div class="content-panel" id="panel-personas">
+                <h2>4. PERFIS DE <span>DECISÃO (ICP)</span></h2>
                 <div class="bento-grid">
-                    <div class="bento-card">
-                        <h3>PERFIL TÉCNICO (CTO / CISO)</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Focado em segurança, conformidade e integridade operacional.</p>
-                        <div style="font-size: 0.85rem; line-height: 1.8;">
-                            <p><strong>Motivador:</strong> Mitigar riscos e garantir robustez técnica.</p>
-                            <p><strong>Objeção:</strong> "Sem capacidade interna para absorver a solução."</p>
-                            <p><strong>Canal:</strong> LinkedIn + Blog SEO técnico.</p>
-                        </div>
+                    <div class="card" style="grid-column: span 6;">
+                        <h3 style="color: var(--accent);">CTO (Perfil Técnico)</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">ResponsÁvel por segurança, conformidade e integridade.</p>
+                        <p><strong>Motivador:</strong> Mitigar riscos e garantir robustez.</p>
+                        <p><strong>Objeção:</strong> "Não temos capacidade interna para absorver."</p>
+                        <p><strong>Canal:</strong> LinkedIn + Blog SEO.</p>
                     </div>
-                    <div class="bento-card">
-                        <h3>PERFIL NEGÓCIO (CEO / COO)</h3>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Focado em ROI, vantagem competitiva e continuidade de negócio.</p>
-                        <div style="font-size: 0.85rem; line-height: 1.8;">
-                            <p><strong>Motivador:</strong> Resultados financeiros e eficiência operacional.</p>
-                            <p><strong>Objeção:</strong> "Investimento não está claro / Falta prova de ROI."</p>
-                            <p><strong>Canal:</strong> ABM + Social Selling executivo.</p>
-                        </div>
+                    <div class="card" style="grid-column: span 6;">
+                        <h3 style="color: var(--accent);">CEO / COO (Perfil NegÓcio)</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">Focado em ROI, vantagem competitiva e escala.</p>
+                        <p><strong>Motivador:</strong> Parceiros que impulsionem resultados financeiros.</p>
+                        <p><strong>Objeção:</strong> "O investimento não estÁ claro / Não vejo o retorno."</p>
+                        <p><strong>Canal:</strong> ABM + Social Selling.</p>
+                    </div>
+                    <div class="card" style="grid-column: span 12; margin-top: 1rem;">
+                        <h3>Personas por Zona GTM</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-dim);">
+                            <strong>Z1:</strong> foco no CTO — precisa entender o problema antes de aprovar. <br>
+                            <strong>Z2:</strong> ambos os perfis ativos — CTO avalia a solução, CEO o parceiro. <br>
+                            <strong>Z3:</strong> foco no CEO/COO — decisão rÁpida baseada em ROI e confiança.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 10: Jornada -->
-        <section id="s10">
-            <div class="content-window">
+            <!-- Panel: Jornada -->
+            <div class="content-panel" id="panel-jornada">
                 <h2>5. MATRIZ DE <span>INFLUÊNCIA</span></h2>
-                <div class="data-table-container">
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Etapa</th><th>Mindset do Cliente</th><th>Ativos de Conteúdo</th></tr>
-                        </thead>
+                        <thead><tr><th>#</th><th>Etapa</th><th>Mindset do Comprador</th><th>Ativos EstratÉgicos</th></tr></thead>
                         <tbody>
-                            <tr><td>1. Awareness</td><td>"Temos um problema oculto que não estamos vendo?"</td><td>Checklist de Riscos, Posts LinkedIn, Artigos de Tendência</td></tr>
-                            <tr><td>2. Educação</td><td>"Quais as melhores práticas e modelos de solução?"</td><td>TriplaCast, Whitepapers, Newsletter técnica</td></tr>
-                            <tr><td>3. Confiança</td><td>"A Tripla já resolveu esse problema antes?"</td><td>Cases de Sucesso, Assessments Interativos, Battle Cards</td></tr>
-                            <tr><td>4. Fechamento</td><td>"Qual o retorno real e impacto no meu negócio?"</td><td>Deck ABM por Conta, One-Page Executivo, Pitch ROI</td></tr>
-                            <tr><td>5. Expansão</td><td>"Qual o próximo passo na nossa maturidade?"</td><td>Conteúdo Vertical Setorial, Newsletter de Clientes</td></tr>
+                            <tr><td>01</td><td>Awareness</td><td>"Tenho gaps ocultos na minha infraestrutura?"</td><td>Checklist, Blog SEO, LinkedIn, Tripla na MÍdia</td></tr>
+                            <tr><td>02</td><td>Educação</td><td>"Quais são as melhores prÁticas do mercado?"</td><td>TriplaCast, Whitepapers, Artigos, Newsletter</td></tr>
+                            <tr><td>03</td><td>Confiança</td><td>"A Tripla jÁ resolveu isso antes?"</td><td>Cases, Assessment Interativo, Battle Cards, Depoimentos</td></tr>
+                            <tr><td>04</td><td>Fechamento</td><td>"Este investimento gera retorno real?"</td><td>Deck ABM, One-Page, Pitch Documentado, Mapping</td></tr>
+                            <tr><td>05</td><td>Expansão</td><td>"Quais os prÓximos passos na evolução?"</td><td>ConteÚdo Vertical, Newsletter Clientes, Roadmaps, Social Selling</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 11: Social -->
-        <section id="s11">
-            <div class="content-window">
-                <h2>7. ESTRATÉGIA POR <span>CANAL (SOCIAL)</span></h2>
-                <div class="bento-grid">
-                    <div class="bento-card">
-                        <div class="tag">LinkedIn</div>
-                        <h3>AUTORIDADE TÉCNICA</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Foco em Social Selling e artigos de liderança. Meta: +15% Impressões m/m.</p>
-                        <div style="font-size: 0.75rem; color: #fff;">• Artigos de liderança<br>• Cortes de TriplaCast<br>• Cases e Depoimentos</div>
-                    </div>
-                    <div class="bento-card">
-                        <div class="tag">Instagram</div>
-                        <h3>HUMANIZAÇÃO DE TI</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Bastidores, cultura e micro-learning. Meta: +10% Alcance m/m.</p>
-                        <div style="font-size: 0.75rem; color: #fff;">• Reels rápidos<br>• Stories com enquetes<br>• Cultura e equipe</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 12: Digital -->
-        <section id="s12">
-            <div class="content-window">
-                <h2>7. ESTRATÉGIA POR <span>CANAL (DIGITAL)</span></h2>
-                <div class="bento-grid">
-                    <div class="bento-card">
-                        <div class="tag">Blog & SEO</div>
-                        <h3>INTENÇÃO COMERCIAL</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Topic Clusters segmentados por zona GTM. Meta: +20% Sessões trimestral.</p>
-                        <div style="font-size: 0.75rem; color: #fff;">• Artigos Pilares (Cornerstone)<br>• Otimização Long-tail<br>• Link building interno</div>
-                    </div>
-                    <div class="bento-card">
-                        <div class="tag">Email Marketing</div>
-                        <h3>NUTRIÇÃO & CONVERSÃO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Sequências automatizadas (MQL->SQL). Meta: >30% Taxa abertura.</p>
-                        <div style="font-size: 0.75rem; color: #fff;">• Newsletter semanal<br>• Fluxos de Whitepaper<br>• Sequências de Re-engagement</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 13: Demanda -->
-        <section id="s13">
-            <div class="content-window">
-                <h2>8.1 ATIVOS: <span>GERAÇÃO DE DEMANDA</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Pilares -->
+            <div class="content-panel" id="panel-pilares">
+                <h2>6. ESTRUTURA POR <span>PILAR GTM</span></h2>
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Ativo</th><th>Descrição Literal do Documento</th><th>Uso</th><th>Zona</th></tr>
-                        </thead>
+                        <thead><tr><th>Pilar GTM</th><th>Objetivo</th><th>Ativos e Materiais</th><th>ICP PrimÁrio</th><th>Etapa da Jornada</th></tr></thead>
                         <tbody>
-                            <tr><td>TriplaCast</td><td>Podcast com especialistas técnicos da Tripla e convidados do setor.</td><td>Cortes p/ Redes</td><td>Z1/Z2</td></tr>
-                            <tr><td>Whitepapers</td><td>Conteúdo denso (10+ pág) sobre dores técnicas profundas e soluções.</td><td>Captura Leads</td><td>Z1/Z2</td></tr>
-                            <tr><td>Assessment Interativo</td><td>Diagnóstico rápido online para o cliente medir sua maturidade técnica.</td><td>Geração MQL</td><td>Z2/Z3</td></tr>
-                            <tr><td>Checklist de Risco</td><td>Ferramenta prática de auto-avaliação imediata (1 pág).</td><td>Awareness</td><td>Z1</td></tr>
-                            <tr><td>Blog SEO</td><td>Artigos otimizados para busca com intenção comercial clara.</td><td>Atração</td><td>Todas</td></tr>
+                            <tr><td>Geração de Demanda</td><td>Atrair novos leads e educar topo e meio.</td><td>TriplaCast, Whitepapers, Blog SEO, Checklists, Assessments.</td><td>CTO / Gerente de TI</td><td>Awareness + Educação</td></tr>
+                            <tr><td>Sales Enablement</td><td>Habilitar vendas para conversão enterprise.</td><td>Cases, Battle Cards, E-books, Pitch, Apres. Comercial.</td><td>CEO / COO + CTO</td><td>Confiança + Fechamento</td></tr>
+                            <tr><td>ABM Intelligence</td><td>Expandir e converter contas de alto valor.</td><td>Deck por Conta, Mapping, Vertical, Emails Personalizados.</td><td>Todos (por conta)</td><td>Fechamento + Expansão</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 14: Enablement -->
-        <section id="s14">
-            <div class="content-window">
-                <h2>8.2 ATIVOS: <span>SALES ENABLEMENT</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Social -->
+            <div class="content-panel" id="panel-social">
+                <h2>7. CANAIS: <span>SOCIAL MEDIA</span></h2>
+                <h3>7.1 LinkedIn — Autoridade B2B</h3>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
                     <table>
-                        <thead>
-                            <tr><th>Ativo</th><th>Descrição Literal do Documento</th><th>Uso</th><th>Zona</th></tr>
-                        </thead>
+                        <thead><tr><th>Formato</th><th>Frequência</th><th>Objetivo</th><th>KPI Principal</th></tr></thead>
                         <tbody>
-                            <tr><td>Battle Cards</td><td>Guia de 1 pág: diferenciais Tripla vs Concorrentes específicos.</td><td>Diferenciação</td><td>Z2/Z3</td></tr>
-                            <tr><td>Cases de Sucesso</td><td>Documento de 2 pág focado em Desafio, Solução e ROI comprovado.</td><td>Prova Social</td><td>Z2/Z3</td></tr>
-                            <tr><td>Pitch Deck ROI</td><td>Calculadora ou visualização clara de retorno sobre investimento.</td><td>Decisão</td><td>Z2/Z3</td></tr>
-                            <tr><td>One-Page Executivo</td><td>Resumo de proposta focado em ganhos de negócio e continuidade.</td><td>C-Level</td><td>Z3</td></tr>
-                            <tr><td>Apres. Comercial</td><td>Deck padrão para reuniões de qualificação e proposta estratégica.</td><td>Vendas</td><td>Todas</td></tr>
+                            <tr><td>Cortes TriplaCast</td><td>1x / semana</td><td>Autoridade + Alcance orgânico</td><td>Visualizações + Salvamentos</td></tr>
+                            <tr><td>Artigos Liderança</td><td>1x / semana</td><td>Posicionamento de executivos</td><td>Impressões + Comentários</td></tr>
+                            <tr><td>Social Selling</td><td>1x / semana</td><td>Amplificar Cases como advisors</td><td>Alcance de 2º e 3º grau</td></tr>
+                            <tr><td>Carrosséis</td><td>1x / semana</td><td>Educação (Z1/Z2)</td><td>Saves + Cliques CTA</td></tr>
+                            <tr><td>Whitepapers</td><td>1x / mês</td><td>Captura leads Tier 1</td><td>Formulários + MQLs</td></tr>
+                            <tr><td>Enquetes</td><td>2x / mês</td><td>Engajamento e coleta dados</td><td>Taxa de resposta</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>7.2 Instagram — Relacionamento</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Formato</th><th>Frequência</th><th>Objetivo</th><th>KPI Principal</th></tr></thead>
+                        <tbody>
+                            <tr><td>Reels Bastidores</td><td>1x / semana</td><td>Humanizar a marca</td><td>Reproduções + Compartilhamentos</td></tr>
+                            <tr><td>Reels Micro-Learning</td><td>1x / semana</td><td>Versão rápida de técnicos</td><td>Salvamentos + Alcance</td></tr>
+                            <tr><td>Stories Enquetes</td><td>3x / semana</td><td>Coletar dores da audiência</td><td>Respostas + Visualizações</td></tr>
+                            <tr><td>Conquistas/Eventos</td><td>Sob demanda</td><td>Reforço de cultura</td><td>Menções + Novos seguidores</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 15: ABM -->
-        <section id="s15">
-            <div class="content-window">
-                <h2>8.3 ATIVOS: <span>ABM INTELLIGENCE</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Digital -->
+            <div class="content-panel" id="panel-digital">
+                <h2>7. CANAIS: <span>DIGITAL & EMAIL</span></h2>
+                <h3>7.3 Blog e SEO</h3>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
                     <table>
-                        <thead>
-                            <tr><th>Ativo</th><th>Descrição Literal do Documento</th><th>Uso</th><th>Zona</th></tr>
-                        </thead>
+                        <thead><tr><th>Tipo</th><th>Volume</th><th>Zona GTM</th><th>CTA PrimÁrio</th></tr></thead>
                         <tbody>
-                            <tr><td>Account Mapping</td><td>Mapeamento granular do comitê de compras: decisores e influenciadores.</td><td>Estratégia</td><td>Z2/Z3</td></tr>
-                            <tr><td>Deck por Conta</td><td>Apresentação com personalização integral da proposta técnica/comercial.</td><td>Fechamento</td><td>Z2/Z3</td></tr>
-                            <tr><td>Conteúdo Vertical</td><td>Materiais exclusivos para nichos específicos (ex.: Financeiro, Indústria).</td><td>Nutrição</td><td>Z1/Z2</td></tr>
-                            <tr><td>Sequência Email ABM</td><td>Cadência personalizada de 5-8 emails para contas Tier 1.</td><td>Prospecção</td><td>Todas</td></tr>
+                            <tr><td>Artigos Pilar</td><td>1 / mÊs</td><td>Z1 / Z2</td><td>Download Whitepaper</td></tr>
+                            <tr><td>Artigos Suporte</td><td>2 / mÊs</td><td>Z1 / Z2</td><td>Solicitar Assessment</td></tr>
+                            <tr><td>Artigos Intenção</td><td>2 / mÊs</td><td>Z3</td><td>Agendar Conversa</td></tr>
+                            <tr><td>Cases (Blog)</td><td>1 / mÊs</td><td>Z2 / Z3</td><td>Agendar Conversa</td></tr>
+                            <tr><td>Artigos Especialista</td><td>2 / mÊs</td><td>Z1 / Z2</td><td>Newsletter / Whitepaper</td></tr>
+                            <tr><td>Guest Posts</td><td>1 / trim</td><td>Todos</td><td>ReferÊncia ao site</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>7.4 Email Marketing</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Tipo</th><th>Frequência</th><th>Segmento</th><th>Objetivo</th></tr></thead>
+                        <tbody>
+                            <tr><td>Newsletter Semanal</td><td>1x / semana</td><td>Toda a base</td><td>Curadoria + Autoridade</td></tr>
+                            <tr><td>Boas-vindas</td><td>AutomÁtico</td><td>Novos leads</td><td>Primeira conversão (14 dias)</td></tr>
+                            <tr><td>Nutrição MQL</td><td>AutomÁtico</td><td>MQLs</td><td>Agendar Assessment/Reunião</td></tr>
+                            <tr><td>Disparo ABM</td><td>Sob demanda</td><td>Contas Tier 1</td><td>ConteÚdo verticalizado</td></tr>
+                            <tr><td>Newsletter Clientes</td><td>1x / mÊs</td><td>Clientes ativos</td><td>Expansão de LTV / Roadmaps</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 16: Fluxo -->
-        <section id="s16">
-            <div class="content-window">
-                <h2>9. FLUXO DE <span>OPERAÇÃO</span></h2>
-                <div class="bento-card">
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem;"><strong>Content-as-a-System:</strong> O fluxo garante qualidade técnica e agilidade de distribuição.</p>
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>1. BRIEFING</h3><p style="font-size: 0.6rem;">Carol Cunha</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>2. BASE</h3><p style="font-size: 0.6rem;">Henrique/Sarah</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>3. REVISÃO</h3><p style="font-size: 0.6rem;">Especialista</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>4. ADAPTAÇÃO</h3><p style="font-size: 0.6rem;">Designers</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>5. APROVAÇÃO</h3><p style="font-size: 0.6rem;">Carol Cunha</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center;"><h3>6. PUBLIC</h3><p style="font-size: 0.6rem;">Henrique/Sarah</p></div>
-                        <div class="bento-card" style="padding: 1rem; text-align: center; grid-column: span 2;"><h3>7. MONITOR</h3><p style="font-size: 0.6rem;">Relatório 30/60/90 dias</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 17: Calendário -->
-        <section id="s17">
-            <div class="content-window">
-                <h2>9.1 CALENDÁRIO <span>SEMANAL</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: Ativos -->
+            <div class="content-panel" id="panel-ativos">
+                <h2>8. CATÁLOGO DE <span>ATIVOS COMPLETO</span></h2>
+                <h3>8.1 Geração de Demanda</h3>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
                     <table>
-                        <thead>
-                            <tr><th>Dia</th><th>LinkedIn</th><th>Instagram</th><th>Blog / Email</th></tr>
-                        </thead>
+                        <thead><tr><th>Ativo</th><th>Descrição</th><th>Zona</th><th>Profundidade</th></tr></thead>
                         <tbody>
-                            <tr><td>Segunda</td><td>Artigo de Liderança de Pensamento</td><td>Stories com enquete da semana</td><td>—</td></tr>
-                            <tr><td>Terça</td><td>Corte de TriplaCast (vídeo)</td><td>Reel de bastidores ou equipe</td><td>Publicação de artigo SEO</td></tr>
-                            <tr><td>Quarta</td><td>Carrossel Educacional</td><td>Stories: dica rápida</td><td>Email de nutrição</td></tr>
-                            <tr><td>Quinta</td><td>Case de Sucesso ou dado mercado</td><td>Reel de micro-learning</td><td>—</td></tr>
-                            <tr><td>Sexta</td><td>Social Selling — executivos</td><td>Stories: encerramento</td><td>Newsletter</td></tr>
+                            <tr><td>TriplaCast</td><td>Podcast/videocast técnico. Base de cortes multicanal.</td><td>Z1 / Z2</td><td>Alta</td></tr>
+                            <tr><td>Whitepapers</td><td>Material denso para captura de leads Tier 1. Gated.</td><td>Z1 / Z2</td><td>Alta</td></tr>
+                            <tr><td>Assessments</td><td>DiagnÓsticos que revelam gaps no ambiente.</td><td>Z2 / Z3</td><td>MÉdia</td></tr>
+                            <tr><td>Checklists</td><td>Ativos de entrada (topo funil). Viralidade.</td><td>Z1</td><td>Baixa</td></tr>
+                            <tr><td>Blog SEO</td><td>Clusters temÁticos para domÍnio orgânico.</td><td>Todas</td><td>MÉdia</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>8.2 Sales Enablement</h3>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
+                    <table>
+                        <thead><tr><th>Ativo</th><th>Descrição</th><th>UsuÁrio</th><th>Zona</th></tr></thead>
+                        <tbody>
+                            <tr><td>Battle Cards</td><td>Guias de diferenciação competitiva (interno).</td><td>Vendedores</td><td>Z2 / Z3</td></tr>
+                            <tr><td>Cases Sucesso</td><td>Provas sociais com mÉtricas e ROI.</td><td>Vendedores + PÓs</td><td>Z2 / Z3</td></tr>
+                            <tr><td>Pitch Doc</td><td>Apresentação padronizada por segmento.</td><td>Vendedores</td><td>Z2 / Z3</td></tr>
+                            <tr><td>One-Page Exec</td><td>Resumo 1 pÁg para CEO/COO (foco ROI).</td><td>Vendedores</td><td>Z3</td></tr>
+                            <tr><td>Apres. Comercial</td><td>Deck padrão para qualificação/proposta.</td><td>Vendedores</td><td>Todas</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>8.3 ABM Intelligence</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Ativo</th><th>Descrição</th><th>Uso</th><th>Zona</th></tr></thead>
+                        <tbody>
+                            <tr><td>Account Mapping</td><td>Mapeamento decisores, influenciadores, bloqueadores.</td><td>EstratÉgia</td><td>Z2 / Z3</td></tr>
+                            <tr><td>Deck por Conta</td><td>Apres. personalizada com dados da empresa-alvo.</td><td>Reunião Fechamento</td><td>Z2 / Z3</td></tr>
+                            <tr><td>ConteÚdo Vertical</td><td>Materiais exclusivos para nichos (Financeiro, etc).</td><td>Nutrição</td><td>Z1 / Z2</td></tr>
+                            <tr><td>Email ABM</td><td>CadÊncia de 5–8 emails para Tier 1.</td><td>Prospecção</td><td>Todas</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 18: Ativação -->
-        <section id="s18">
-            <div class="content-window">
+            <!-- Panel: Workflow -->
+            <div class="content-panel" id="panel-workflow">
+                <h2>9. FLUXO & <span>CALENDÁRIO</span></h2>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>HorÁrios de Maior Impacto</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        <strong>LinkedIn:</strong> Terças e quartas, 8h–10h e 17h–19h. <br>
+                        <strong>Instagram:</strong> Terças, quintas e sextas, 12h–13h e 19h–21h. <br>
+                        <strong>Email:</strong> Terças e quintas, 9h–10h. <br>
+                        <strong>Blog:</strong> Impacto via SEO, não horÁrio.
+                    </p>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Dia</th><th>LinkedIn</th><th>Instagram</th><th>Blog / Email</th></tr></thead>
+                        <tbody>
+                            <tr><td>Segunda</td><td>Artigo Liderança</td><td>Enquete semanal</td><td>—</td></tr>
+                            <tr><td>Terça</td><td>Corte TriplaCast</td><td>Bastidores/Equipe</td><td>Artigo SEO</td></tr>
+                            <tr><td>Quarta</td><td>Carrossel Educacional</td><td>Dica rÁpida</td><td>Email Nutrição</td></tr>
+                            <tr><td>Quinta</td><td>Case ou Dado Mercado</td><td>Micro-learning</td><td>—</td></tr>
+                            <tr><td>Sexta</td><td>Social Selling Executivos</td><td>Encerramento</td><td>Newsletter</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Panel: Ativação -->
+            <div class="content-panel" id="panel-ativacao">
                 <h2>10. PLANO DE <span>ATIVAÇÃO</span></h2>
                 <div class="bento-grid">
-                    <div class="bento-card">
-                        <h3 style="color: var(--primary-sky);">F01: PREPARAÇÃO</h3>
-                        <ul style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
-                            <li>• Auditoria completa de ativos e mapeamento GTM.</li>
-                            <li>• Setup KPIs e Analytics (GA4, CRM).</li>
-                            <li>• Manual de Tom de Voz e Identidade Editorial.</li>
-                            <li>• Mapeamento inicial ABM Tier 1 (20 contas).</li>
-                            <li>• Treinamento comercial no Enablement GTM.</li>
-                        </ul>
+                    <div class="card" style="grid-column: span 6;">
+                        <span class="badge">Fase 01: Preparação</span>
+                        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">Setup Baseline validado. Auditoria ativos, Setup KPIs (GA4/CRM), Manual Voz, Mapping ABM, Treinamento Enablement.</p>
                     </div>
-                    <div class="bento-card">
-                        <h3 style="color: var(--primary-sky);">F02: LANÇAMENTO</h3>
-                        <ul style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
-                            <li>• TriplaCast: 3 primeiros episódios (Z1/Z2).</li>
-                            <li>• Publicação do 1º Whitepaper (Captura Z1).</li>
-                            <li>• Blog: 3 artigos pilares SEO (Z1, Z2, Z3).</li>
-                            <li>• Enablement: Battle Cards iniciais (Z3).</li>
-                        </ul>
+                    <div class="card" style="grid-column: span 6;">
+                        <span class="badge">Fase 02: LanÇamento</span>
+                        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">TriplaCast (3 ep), 1º Whitepaper (Z1), Blog SEO (3 pilares), Enablement Z3, InÍcio automações.</p>
                     </div>
-                    <div class="bento-card">
-                        <h3 style="color: var(--primary-sky);">F03: ESCALA</h3>
-                        <ul style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
-                            <li>• Campanhas ABM Tier 1 (Z2/Z3).</li>
-                            <li>• Expansão SEO: artigos suporte + long-tail.</li>
-                            <li>• Ativação Social Selling sistemático.</li>
-                            <li>• Lançamento Assessment Interativo (MQL).</li>
-                        </ul>
+                    <div class="card" style="grid-column: span 6;">
+                        <span class="badge">Fase 03: Escalabilidade</span>
+                        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">Campanhas ABM (Z2/Z3), SEO long-tail, Social Selling sistemÁtico, Assessment MQL, Newsletter ativa.</p>
                     </div>
-                    <div class="bento-card">
-                        <h3 style="color: var(--primary-sky);">F04: OTIMIZAÇÃO</h3>
-                        <ul style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.8;">
-                            <li>• Revisão de ROI por canal e zona GTM.</li>
-                            <li>• Ajuste de ICP por conversão real.</li>
-                            <li>• Plano de expansão clientes ativos (LTV).</li>
-                            <li>• Revisão trimestral estratégica.</li>
-                        </ul>
+                    <div class="card" style="grid-column: span 6;">
+                        <span class="badge">Fase 04: Otimização</span>
+                        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">Revisão ROI por zona, Ajuste ICP real, Expansão LTV clientes ativos, Novos mercados, Revisão estratégica.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 19: ABM Processo -->
-        <section id="s19">
-            <div class="content-window">
-                <h2>11.1 PROCESSO <span>ABM INTELLIGENCE</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: ABM -->
+            <div class="content-panel" id="panel-abm">
+                <h2>11. ESTRATÉGIA <span>ABM INTELLIGENCE</span></h2>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
                     <table>
-                        <thead>
-                            <tr><th>Etapa</th><th>Ação Literal</th><th>Responsável</th></tr>
-                        </thead>
+                        <thead><tr><th>Etapa</th><th>Ação</th><th>ResponsÁvel</th></tr></thead>
                         <tbody>
-                            <tr><td>1. Identificação</td><td>Time comercial lista contas fit com Tripla (Ticket, ICP, Setor).</td><td>Vendas</td></tr>
-                            <tr><td>2. Qualificação</td><td>Contas ranqueadas por potencial, urgência e probabilidade.</td><td>Marketing + Vendas</td></tr>
-                            <tr><td>3. Mapping</td><td>Mapeamento granular do comitê de compras (Decisor, Influenciador, Detrator).</td><td>Marketing</td></tr>
-                            <tr><td>4. Priorização</td><td>Top 10-20 contas recebem tratamento ABM sistemático.</td><td>Carolina Cunha</td></tr>
-                            <tr><td>5. Execução</td><td>Disparo de cadências personalizadas e anúncios segmentados.</td><td>Marketing + SDR</td></tr>
+                            <tr><td>Identificação</td><td>Lista contas fit (tamanho, setor, solução).</td><td>Vendas</td></tr>
+                            <tr><td>Qualificação</td><td>Ranking por receita, funil e probabilidade.</td><td>Marketing + Vendas</td></tr>
+                            <tr><td>Mapping</td><td>Mapeamento decisores, influenciadores e bloqueadores.</td><td>Marketing</td></tr>
+                            <tr><td>Priorização</td><td>Top 10–20 contas tratamento completo.</td><td>Carolina Cunha</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>11.2 Materiais por EstÁgio</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>EstÁgio</th><th>Objetivo</th><th>ConteÚdo Personalizado</th></tr></thead>
+                        <tbody>
+                            <tr><td>Awareness</td><td>Radar da conta</td><td>Posts segmentados + TendÊncias do setor.</td></tr>
+                            <tr><td>Educação</td><td>Profundidade tÉcnica</td><td>Whitepaper aplicado + TriplaCast alinhado.</td></tr>
+                            <tr><td>Confiança</td><td>Provar experiência</td><td>Case de sucesso porte/setor similar + Depoimentos.</td></tr>
+                            <tr><td>Fechamento</td><td>Eliminar objeções</td><td>Deck ABM + One-Page + Mapping + Battle Card.</td></tr>
+                            <tr><td>Expansão</td><td>Aumentar LTV</td><td>RelatÓrio valor + Convite TriplaCast como case.</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 20: ABM Materiais -->
-        <section id="s20">
-            <div class="content-window">
-                <h2>11.2 MATERIAIS <span>ABM POR ESTÁGIO</span></h2>
-                <div class="data-table-container">
+            <!-- Panel: KPIs -->
+            <div class="content-panel" id="panel-kpis">
+                <h2>12. INDICADORES DE <span>SUCESSO (KPIs)</span></h2>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
                     <table>
-                        <thead>
-                            <tr><th>Estágio</th><th>Objetivo</th><th>Conteúdo Personalizado</th></tr>
-                        </thead>
+                        <thead><tr><th>Topo de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
                         <tbody>
-                            <tr><td>Awareness</td><td>Radar da conta</td><td>Posts segmentados + Tendências do setor da conta.</td></tr>
-                            <tr><td>Educação</td><td>Profundidade técnica</td><td>Whitepaper aplicado + TriplaCast alinhado à dor.</td></tr>
-                            <tr><td>Confiança</td><td>Provar experiência</td><td>Case sucesso do mesmo porte ou setor da conta.</td></tr>
-                            <tr><td>Fechamento</td><td>Remover objeções</td><td>Deck ABM Customizado + One-Page + Battle Card.</td></tr>
-                            <tr><td>Expansão</td><td>Aumentar LTV</td><td>Relatório de valor gerado + Convite para Case.</td></tr>
+                            <tr><td>Impressões LinkedIn</td><td>+15% mÊs a mÊs</td><td>Geração Demanda</td></tr>
+                            <tr><td>Alcance Instagram</td><td>+10% mÊs a mÊs</td><td>Geração Demanda</td></tr>
+                            <tr><td>Sessões Blog</td><td>+20% trimestral</td><td>Geração Demanda</td></tr>
+                            <tr><td>Palavras-chave 1ª pÁg</td><td>+5 palavras/mÊs</td><td>Geração Demanda</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
+                    <table>
+                        <thead><tr><th>Meio de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
+                        <tbody>
+                            <tr><td>Comentários Decisores (LI)</td><td>20+ / mÊs</td><td>Geração Demanda</td></tr>
+                            <tr><td>Downloads Whitepapers</td><td>50+ / mÊs</td><td>Geração Demanda</td></tr>
+                            <tr><td>Assessments concluÍdos</td><td>15+ / mÊs</td><td>Geração Demanda</td></tr>
+                            <tr><td>Taxa abertura Email</td><td>>30%</td><td>Enablement</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Fundo de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
+                        <tbody>
+                            <tr><td>Solicitações DiagnÓstico</td><td>10+ / mÊs</td><td>Demanda</td></tr>
+                            <tr><td>MQLs por conteúdo</td><td>20+ / mÊs</td><td>Enablement</td></tr>
+                            <tr><td>Conversão MQL -> SQL</td><td>>25%</td><td>ABM + Enablement</td></tr>
+                            <tr><td>Contas ABM em pipeline</td><td>5–10 contas</td><td>ABM</td></tr>
+                            <tr><td>Velocidade Ciclo Venda</td><td>-15% trimestral</td><td>Enablement/ABM</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 21: KPIs Topo -->
-        <section id="s21">
-            <div class="content-window">
-                <h2>12. KPIs — <span>TOPO E MEIO DE FUNIL</span></h2>
-                <div class="data-table-container">
-                    <table>
-                        <thead>
-                            <tr><th>Indicador</th><th>Meta Literal</th><th>Pilar GTM</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Impressões LinkedIn (Company)</td><td>+15% m/m</td><td>Geração Demanda</td></tr>
-                            <tr><td>Sessões Orgânicas Blog</td><td>+20% trimestral</td><td>Geração Demanda</td></tr>
-                            <tr><td>Palavras-chave 1ª pág (Google)</td><td>+5 palavras/mês</td><td>Geração Demanda</td></tr>
-                            <tr><td>Downloads Whitepapers</td><td>50+ / mês</td><td>Geração Demanda</td></tr>
-                            <tr><td>Taxa de abertura Email (News)</td><td>>30%</td><td>Enablement</td></tr>
-                            <tr><td>Taxa de clique (CTR) Email</td><td>>5%</td><td>Enablement</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 22: KPIs Fundo -->
-        <section id="s22">
-            <div class="content-window">
-                <h2>12. KPIs — <span>FUNDO E CONVERSÃO</span></h2>
-                <div class="data-table-container">
-                    <table>
-                        <thead>
-                            <tr><th>Indicador</th><th>Meta Literal</th><th>Pilar GTM</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Solicitações Diagnóstico/Reunião</td><td>10+ / mês</td><td>Geração Demanda</td></tr>
-                            <tr><td>MQLs gerados (Totais)</td><td>20+ / mês</td><td>Enablement</td></tr>
-                            <tr><td>Taxa de conversão MQL -> SQL</td><td>>25%</td><td>ABM + Enablement</td></tr>
-                            <tr><td>Contas ABM ativas em pipeline</td><td>5-10 contas</td><td>ABM</td></tr>
-                            <tr><td>Velocidade Ciclo Venda</td><td>-15% trimestral</td><td>Enablement + ABM</td></tr>
-                            <tr><td>Custo de Aquisição (CAC)</td><td>Otimização m/m</td><td>Estratégia</td></tr>
-                            <tr><td>Receita Influenciada Marketing</td><td>Meta Comercial</td><td>Todos</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 23: Stack -->
-        <section id="s23">
-            <div class="content-window">
+            <!-- Panel: Stack -->
+            <div class="content-panel" id="panel-stack">
                 <h2>13. STACK DE <span>FERRAMENTAS</span></h2>
-                <div class="data-table-container">
+                <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr><th>Categoria</th><th>Ferramenta</th><th>Finalidade Estratégica</th></tr>
-                        </thead>
+                        <thead><tr><th>Categoria</th><th>Ferramenta</th><th>Finalidade</th></tr></thead>
                         <tbody>
-                            <tr><td>SEO</td><td>Semrush / Ahrefs</td><td>Topic Clusters, Monitoramento e Koncorrência.</td></tr>
-                            <tr><td>Analytics</td><td>GA4 + Search Console</td><td>Tráfego, Indexação e Performance de Conteúdo.</td></tr>
-                            <tr><td>Social Media</td><td>mLabs / Etus</td><td>Gestão, Agendamento e Relatórios.</td></tr>
-                            <tr><td>Design</td><td>Adobe Suite / Canva Pro</td><td>Criação Visual para todos os ativos.</td></tr>
-                            <tr><td>Vídeo</td><td>Premiere / After Effects</td><td>Cortes TriplaCast e Reels Instagram.</td></tr>
-                            <tr><td>Editorial</td><td>ClickUp</td><td>Gestão de Pautas, Briefings e Workflow.</td></tr>
-                            <tr><td>ABM</td><td>LinkedIn Sales Navigator</td><td>Account Mapping e Social Selling SME.</td></tr>
-                            <tr><td>CRM / Automação</td><td>RD Station / HubSpot</td><td>Nutrição de Leads e Pipeline.</td></tr>
+                            <tr><td>SEO</td><td>Semrush / Ahrefs</td><td>Clusters, rankings e concorrÊncia.</td></tr>
+                            <tr><td>Analytics</td><td>GA4 + Search Console</td><td>TrÁfego e comportamento.</td></tr>
+                            <tr><td>Social</td><td>mLabs / Etus</td><td>Gestão e agendamento.</td></tr>
+                            <tr><td>Design</td><td>Adobe Suite</td><td>Peças visuais multicanal.</td></tr>
+                            <tr><td>VÍdeo</td><td>Premiere / After Effects</td><td>Reels e TriplaCast.</td></tr>
+                            <tr><td>Editorial</td><td>ClickUp</td><td>Pautas e workflow.</td></tr>
+                            <tr><td>ABM</td><td>Sales Navigator</td><td>Account Mapping / SME.</td></tr>
+                            <tr><td>CRM</td><td>RD Station / HubSpot</td><td>Automação e nutrição.</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
 
-        <!-- Slide 24: Governança -->
-        <section id="s24">
-            <div class="content-window">
-                <h2>14. GOVERNANÇA E <span>REVISÃO</span></h2>
-                <div class="bento-grid">
-                    <div class="bento-card">
-                        <div class="tag">Cadência</div>
-                        <h3>RITMO DE GESTÃO</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
-                            • <strong>Semanal:</strong> Ajustes táticos (Henrique, Sarah, Carol).<br>
-                            • <strong>Mensal:</strong> KPIs e Calendário Editorial.<br>
-                            • <strong>Trimestral:</strong> ROI, Estratégia e Liderança.
-                        </p>
-                    </div>
-                    <div class="bento-card">
-                        <div class="tag">Gatilhos</div>
-                        <h3>NECESSIDADE DE REVISÃO</h3>
-                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.8;">
-                            • Mudança no posicionamento Tripla.<br>
-                            • Reposicionamento na Matriz GTM.<br>
-                            • Queda >30% em KPIs por 2 meses.<br>
-                            • Mudança relevante em algoritmos.<br>
-                            • Novo concorrente de peso no nicho.
-                        </p>
-                    </div>
+            <!-- Panel: Governança -->
+            <div class="content-panel" id="panel-governanca">
+                <h2>14. GOVERNANÇA & <span>CONTROLE</span></h2>
+                <div class="table-wrapper" style="margin-bottom: 2rem;">
+                    <table>
+                        <thead><tr><th>Ciclo</th><th>Participantes</th><th>Pauta Principal</th></tr></thead>
+                        <tbody>
+                            <tr><td>Semanal</td><td>Henrique, Sarah, Carol</td><td>Ajustes tÁticos e performance 7 dias.</td></tr>
+                            <tr><td>Mensal</td><td>Time Marketing</td><td>KPIs mensais, editorial e ABM.</td></tr>
+                            <tr><td>Trimestral</td><td>Mark., Com., Liderança</td><td>ROI, EstratÉgia, ICP e prioridades.</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div style="margin-top: 4rem; text-align: center; opacity: 0.3; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.5em;">TRIPLA STRATEGY HUB — V3 COMPLETE</div>
+                <h3>14.2 CritÉrios para Revisão Antecipada</h3>
+                <div class="card">
+                    <ul style="font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+                        <li>• Mudança no posicionamento, portfÓlio ou precificação.</li>
+                        <li>• Reposicionamento de soluções na Matriz GTM.</li>
+                        <li>• Entrada de novo concorrente relevante.</li>
+                        <li>• Queda >30% em KPIs de topo por dois meses.</li>
+                        <li>• Mudança de algoritmo relevante (Google/LinkedIn).</li>
+                        <li>• Oportunidade de co-marketing não prevista.</li>
+                        <li>• Feedback sistemÁtico comercial sobre lacunas.</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <script src="main.js"></script>
 </body>
