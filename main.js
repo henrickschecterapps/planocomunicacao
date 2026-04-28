@@ -49,12 +49,8 @@ const auth = firebase.auth();
             loginError.textContent = '';
             loginBtn.classList.add('loading');
             loginBtn.disabled = true;
-
             try {
-                await auth.signInWithEmailAndPassword(
-                    loginEmail.value.trim(),
-                    loginPassword.value
-                );
+                await auth.signInWithEmailAndPassword(loginEmail.value.trim(), loginPassword.value);
             } catch (err) {
                 loginError.textContent = getErrorMessage(err.code);
                 loginBtn.classList.remove('loading');
@@ -67,7 +63,6 @@ const auth = firebase.auth();
     }
 
     let dashboardInitialized = false;
-
     auth.onAuthStateChanged((user) => {
         if (user) {
             loginOverlay.classList.add('hidden');
@@ -77,43 +72,29 @@ const auth = firebase.auth();
                 dashboardInitialized = true;
                 initDashboard();
             }
+            // Initialize Icons
+            if (window.lucide) lucide.createIcons();
         } else {
             loginOverlay.classList.remove('hidden');
             dashboard.style.display = 'none';
         }
     });
 
-    // Logout button
-    document.getElementById('logout-btn')?.addEventListener('click', () => {
-        auth.signOut();
-    });
+    document.getElementById('logout-btn')?.addEventListener('click', () => auth.signOut());
 })();
 
-// ========== UPDATE USER UI ==========
 function updateUserUI(user) {
     const emailEl = document.getElementById('sidebar-email');
     const avatarEl = document.getElementById('sidebar-avatar');
-    if (emailEl && user.email) {
-        emailEl.textContent = user.email;
-    }
-    if (avatarEl && user.email) {
-        avatarEl.textContent = user.email.charAt(0).toUpperCase();
-    }
+    if (emailEl && user.email) emailEl.textContent = user.email;
+    if (avatarEl && user.email) avatarEl.textContent = user.email.charAt(0).toUpperCase();
 }
 
-// ========== SHAKE ANIMATION ==========
-(function injectShakeKeyframes() {
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-10px); }
-            40% { transform: translateX(10px); }
-            60% { transform: translateX(-6px); }
-            80% { transform: translateX(6px); }
-        }
-    `;
-    document.head.appendChild(style);
+// ========== SHAKE KEYFRAMES ==========
+(function () {
+    const s = document.createElement('style');
+    s.textContent = `@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}`;
+    document.head.appendChild(s);
 })();
 
 // ========== MOBILE MENU ==========
@@ -129,8 +110,7 @@ function updateUserUI(user) {
     }
 
     hamburger?.addEventListener('click', () => {
-        const isOpen = sidebar.classList.contains('open');
-        if (isOpen) {
+        if (sidebar.classList.contains('open')) {
             closeSidebar();
         } else {
             backdrop.style.display = 'block';
@@ -143,7 +123,6 @@ function updateUserUI(user) {
 
     backdrop?.addEventListener('click', closeSidebar);
 
-    // Close sidebar on nav click (mobile)
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', () => {
             if (window.innerWidth <= 900) closeSidebar();
@@ -155,115 +134,152 @@ function updateUserUI(user) {
 function initDashboard() {
     const navItems = Array.from(document.querySelectorAll('.nav-item'));
     const progressBar = document.getElementById('nav-progress-bar');
+    const topbarSection = document.getElementById('topbar-section');
+    const topbarCounter = document.getElementById('topbar-counter');
+    const prevBtn = document.getElementById('nav-prev');
+    const nextBtn = document.getElementById('nav-next');
+    const prevLabel = document.getElementById('nav-prev-label');
+    const nextLabel = document.getElementById('nav-next-label');
+    const searchInput = document.getElementById('nav-search');
+    const total = navItems.length;
+
     let currentIndex = 0;
     let isTransitioning = false;
 
-    function updateProgress(index) {
-        if (!progressBar) return;
-        const pct = ((index + 1) / navItems.length) * 100;
-        progressBar.style.width = pct + '%';
+    // Search Filtering
+    searchInput?.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        const groups = document.querySelectorAll('.nav-group');
+        let totalVisible = 0;
+        
+        groups.forEach(group => {
+            const items = group.querySelectorAll('.nav-item');
+            let groupVisible = false;
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const visible = text.includes(term);
+                item.style.display = visible ? 'block' : 'none';
+                if (visible) {
+                    groupVisible = true;
+                    totalVisible++;
+                }
+            });
+            
+            group.style.display = groupVisible ? 'flex' : 'none';
+        });
+
+        // Toggle visibility of a potential "no results" message if you decide to add one later
+        searchInput.style.borderColor = (term !== '' && totalVisible === 0) ? 'var(--danger)' : '';
+    });
+
+    function getLabel(index) {
+        return navItems[index]?.textContent || '';
     }
 
-    navItems.forEach((item, index) => {
+    function updateUI(index) {
+        if (progressBar) progressBar.style.width = ((index + 1) / total * 100) + '%';
+        if (topbarSection) topbarSection.textContent = getLabel(index);
+        if (topbarCounter) topbarCounter.textContent = (index + 1) + ' / ' + total;
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === total - 1;
+        if (prevLabel) prevLabel.textContent = index > 0 ? getLabel(index - 1) : 'Anterior';
+        if (nextLabel) nextLabel.textContent = index < total - 1 ? getLabel(index + 1) : 'Próxima';
+    }
+
+    navItems.forEach((item, i) => {
         item.addEventListener('click', () => {
-            if (isTransitioning) return;
-            setActiveIndex(index);
+            if (!isTransitioning) setActiveIndex(i);
         });
     });
 
+    prevBtn?.addEventListener('click', () => { if (!isTransitioning) setActiveIndex(currentIndex - 1); });
+    nextBtn?.addEventListener('click', () => { if (!isTransitioning) setActiveIndex(currentIndex + 1); });
+
     function setActiveIndex(index) {
-        if (index < 0 || index >= navItems.length || index === currentIndex) return;
-
+        if (index < 0 || index >= total || index === currentIndex) return;
         const targetId = navItems[index].getAttribute('data-target');
-
         navItems.forEach(i => i.classList.remove('active'));
         navItems[index].classList.add('active');
-
         switchPanel(targetId);
         currentIndex = index;
-        updateProgress(index);
-
+        updateUI(index);
         navItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     function switchPanel(targetId) {
-        const currentPanel = document.querySelector('.content-panel.active');
-        const nextPanel = document.getElementById(targetId);
-
-        if (!currentPanel || !nextPanel || currentPanel === nextPanel) return;
+        const cur = document.querySelector('.content-panel.active');
+        const next = document.getElementById(targetId);
+        if (!cur || !next || cur === next) return;
 
         isTransitioning = true;
-
         anime({
-            targets: currentPanel,
-            opacity: 0,
-            translateY: 20,
-            duration: 300,
-            easing: 'easeInQuad',
+            targets: cur, opacity: 0, translateY: 20, duration: 250, easing: 'easeInQuad',
             complete: () => {
-                currentPanel.classList.remove('active');
-                currentPanel.scrollTop = 0;
-                nextPanel.classList.add('active');
-                nextPanel.scrollTop = 0;
-
+                cur.classList.remove('active');
+                cur.scrollTop = 0;
+                next.classList.add('active');
+                next.scrollTop = 0;
                 anime({
-                    targets: nextPanel,
-                    opacity: [0, 1],
-                    translateY: [20, 0],
-                    duration: 600,
-                    easing: 'easeOutQuart',
+                    targets: next, opacity: [0, 1], translateY: [20, 0], duration: 500, easing: 'easeOutQuart',
                     complete: () => { isTransitioning = false; }
                 });
-
-                animatePanelItems(nextPanel);
+                animatePanelItems(next);
             }
         });
     }
 
     function animatePanelItems(panel) {
         const items = panel.querySelectorAll('.card, .table-wrapper, h2, h3, p, tr, li');
-
         anime({
             targets: items,
             opacity: [0, 1],
-            translateY: [15, 0],
-            delay: anime.stagger(30, { start: 50 }),
-            duration: 700,
+            translateY: [12, 0],
+            delay: anime.stagger(25, { start: 40 }),
+            duration: 600,
             easing: 'easeOutQuart'
         });
     }
 
-    // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
         if (isTransitioning) return;
-        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-            e.preventDefault();
-            setActiveIndex(currentIndex + 1);
-        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-            e.preventDefault();
-            setActiveIndex(currentIndex - 1);
-        }
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); setActiveIndex(currentIndex + 1); }
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); setActiveIndex(currentIndex - 1); }
     });
 
-    // Background Glows follow mouse
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const viewport = document.querySelector('.main-viewport');
+
+    viewport?.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    viewport?.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        const dy = e.changedTouches[0].screenY - touchStartY;
+        if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+            if (dx < 0) setActiveIndex(currentIndex + 1);
+            else setActiveIndex(currentIndex - 1);
+        }
+    }, { passive: true });
+
     document.addEventListener('mousemove', (e) => {
         const glows = document.querySelectorAll('.glow');
-        const x = e.clientX;
-        const y = e.clientY;
-
-        glows.forEach((glow, index) => {
-            const speed = (index + 1) * 0.02;
+        glows.forEach((glow, i) => {
+            const speed = (i + 1) * 0.02;
             anime({
                 targets: glow,
-                translateX: (x - window.innerWidth / 2) * speed,
-                translateY: (y - window.innerHeight / 2) * speed,
-                duration: 500,
-                easing: 'easeOutQuad'
+                translateX: (e.clientX - window.innerWidth / 2) * speed,
+                translateY: (e.clientY - window.innerHeight / 2) * speed,
+                duration: 500, easing: 'easeOutQuad'
             });
         });
     });
 
-    // Initial animation
-    updateProgress(0);
+    updateUI(0);
     animatePanelItems(document.querySelector('.content-panel.active'));
 }

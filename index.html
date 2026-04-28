@@ -10,6 +10,8 @@
     <!-- Firebase SDK (compat) -->
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <div class="bg-stage">
@@ -67,15 +69,20 @@
                 <div class="logo-icon"></div>
                 TRIPLA
             </div>
+
+            <div class="search-container">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="nav-search" placeholder="Buscar no plano..." aria-label="Buscar seções">
+            </div>
             
             <nav class="nav-group">
-                <span class="nav-label">Estratégia</span>
+                <span class="nav-label"><i data-lucide="target"></i> Estratégia</span>
                 <div class="nav-item active" data-target="panel-capa">Visão Geral</div>
                 <div class="nav-item" data-target="panel-contexto">Contexto e Objetivos</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Matriz GTM</span>
+                <span class="nav-label"><i data-lucide="layers"></i> Matriz GTM</span>
                 <div class="nav-item" data-target="panel-gtm-hub">A Matriz 2026</div>
                 <div class="nav-item" data-target="panel-gtm-z1">Z1 — Evangelização</div>
                 <div class="nav-item" data-target="panel-gtm-z2">Z2 — Especialização</div>
@@ -84,38 +91,38 @@
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Execução</span>
+                <span class="nav-label"><i data-lucide="rocket"></i> Execução</span>
                 <div class="nav-item" data-target="panel-personas">Personas (ICP)</div>
                 <div class="nav-item" data-target="panel-jornada">Jornada do Cliente</div>
                 <div class="nav-item" data-target="panel-pilares">Pilares GTM</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Canais</span>
+                <span class="nav-label"><i data-lucide="share-2"></i> Canais</span>
                 <div class="nav-item" data-target="panel-social">LinkedIn & Instagram</div>
                 <div class="nav-item" data-target="panel-digital">Blog, SEO & Email</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Catálogo de Ativos</span>
+                <span class="nav-label"><i data-lucide="folder-kanban"></i> Catálogo de Ativos</span>
                 <div class="nav-item" data-target="panel-ativos">Ativos Completos</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Operação</span>
+                <span class="nav-label"><i data-lucide="settings-2"></i> Operação</span>
                 <div class="nav-item" data-target="panel-workflow">Fluxo & Calendário</div>
                 <div class="nav-item" data-target="panel-ativacao">Plano de Ativação</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Inteligência</span>
+                <span class="nav-label"><i data-lucide="brain-circuit"></i> Inteligência</span>
                 <div class="nav-item" data-target="panel-abm">Processo ABM</div>
                 <div class="nav-item" data-target="panel-kpis">Indicadores (KPIs)</div>
                 <div class="nav-item" data-target="panel-stack">Ferramentas</div>
             </nav>
 
             <nav class="nav-group">
-                <span class="nav-label">Governança</span>
+                <span class="nav-label"><i data-lucide="shield-check"></i> Governança</span>
                 <div class="nav-item" data-target="panel-governanca">Revisão e Controle</div>
             </nav>
 
@@ -134,7 +141,17 @@
             </div>
         </aside>
 
-        <main class="main-viewport">
+        <main class="main-viewport" role="main">
+            <!-- Top Bar -->
+            <div class="viewport-topbar" id="viewport-topbar">
+                <div class="topbar-left">
+                    <span class="topbar-section" id="topbar-section">Visão Geral</span>
+                </div>
+                <div class="topbar-right">
+                    <span class="topbar-counter" id="topbar-counter">1 / 16</span>
+                </div>
+            </div>
+
             <!-- Panel: Capa -->
             <div class="content-panel active" id="panel-capa">
                 <span class="badge" style="color: var(--accent);">Estratégia Digital 2026</span>
@@ -538,10 +555,10 @@
                     <table>
                         <thead><tr><th>Topo de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
                         <tbody>
-                            <tr><td>Impressões LinkedIn</td><td>+15% mês a mês</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Alcance Instagram</td><td>+10% mês a mês</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Sessões Blog</td><td>+20% trimestral</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Palavras-chave 1ª pág</td><td>+5 palavras/mês</td><td>Geração de Demanda</td></tr>
+                            <tr><td>Impressões LinkedIn</td><td><div class="kpi-value"><span>+15% mês a mês</span><div class="kpi-bar" style="width: 75%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Alcance Instagram</td><td><div class="kpi-value"><span>+10% mês a mês</span><div class="kpi-bar" style="width: 60%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Sessões Blog</td><td><div class="kpi-value"><span>+20% trimestral</span><div class="kpi-bar" style="width: 85%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Palavras-chave 1ª pág</td><td><div class="kpi-value"><span>+5 palavras/mês</span><div class="kpi-bar" style="width: 50%;"></div></div></td><td>Geração de Demanda</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -549,10 +566,10 @@
                     <table>
                         <thead><tr><th>Meio de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
                         <tbody>
-                            <tr><td>Comentários Decisores (LI)</td><td>20+ / mês</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Downloads Whitepapers</td><td>50+ / mês</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Assessments concluídos</td><td>15+ / mês</td><td>Geração de Demanda</td></tr>
-                            <tr><td>Taxa abertura Email</td><td>>30%</td><td>Enablement</td></tr>
+                            <tr><td>Comentários Decisores (LI)</td><td><div class="kpi-value"><span>20+ / mês</span><div class="kpi-bar" style="width: 40%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Downloads Whitepapers</td><td><div class="kpi-value"><span>50+ / mês</span><div class="kpi-bar" style="width: 70%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Assessments concluídos</td><td><div class="kpi-value"><span>15+ / mês</span><div class="kpi-bar" style="width: 30%;"></div></div></td><td>Geração de Demanda</td></tr>
+                            <tr><td>Taxa abertura Email</td><td><div class="kpi-value"><span>>30%</span><div class="kpi-bar" style="width: 90%;"></div></div></td><td>Enablement</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -560,11 +577,11 @@
                     <table>
                         <thead><tr><th>Fundo de Funil</th><th>Meta</th><th>Pilar</th></tr></thead>
                         <tbody>
-                            <tr><td>Solicitações Diagnóstico</td><td>10+ / mês</td><td>Demanda</td></tr>
-                            <tr><td>MQLs por conteúdo</td><td>20+ / mês</td><td>Enablement</td></tr>
-                            <tr><td>Conversão MQL -> SQL</td><td>>25%</td><td>ABM + Enablement</td></tr>
-                            <tr><td>Contas ABM em pipeline</td><td>5–10 contas</td><td>ABM</td></tr>
-                            <tr><td>Velocidade Ciclo Venda</td><td>-15% trimestral</td><td>Enablement/ABM</td></tr>
+                            <tr><td>Solicitações Diagnóstico</td><td><div class="kpi-value"><span>10+ / mês</span><div class="kpi-bar" style="width: 25%;"></div></div></td><td>Demanda</td></tr>
+                            <tr><td>MQLs por conteúdo</td><td><div class="kpi-value"><span>20+ / mês</span><div class="kpi-bar" style="width: 55%;"></div></div></td><td>Enablement</td></tr>
+                            <tr><td>Conversão MQL -> SQL</td><td><div class="kpi-value"><span>>25%</span><div class="kpi-bar" style="width: 80%;"></div></div></td><td>ABM + Enablement</td></tr>
+                            <tr><td>Contas ABM em pipeline</td><td><div class="kpi-value"><span>5–10 contas</span><div class="kpi-bar" style="width: 45%;"></div></div></td><td>ABM</td></tr>
+                            <tr><td>Velocidade Ciclo Venda</td><td><div class="kpi-value"><span>-15% trimestral</span><div class="kpi-bar" style="width: 65%;"></div></div></td><td>Enablement/ABM</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -615,6 +632,18 @@
                         <li>• Feedback sistemático comercial sobre lacunas.</li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="viewport-bottombar" id="viewport-bottombar">
+                <button class="nav-arrow nav-prev" id="nav-prev" aria-label="Seção anterior">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    <span id="nav-prev-label">Anterior</span>
+                </button>
+                <button class="nav-arrow nav-next" id="nav-next" aria-label="Próxima seção">
+                    <span id="nav-next-label">Próxima</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
             </div>
         </main>
     </div>
