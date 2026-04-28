@@ -22,7 +22,6 @@ const auth = firebase.auth();
     const loginError = document.getElementById('login-error');
     const togglePassword = document.getElementById('toggle-password');
 
-    // Toggle password visibility
     if (togglePassword) {
         togglePassword.addEventListener('click', () => {
             const type = loginPassword.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -31,7 +30,6 @@ const auth = firebase.auth();
         });
     }
 
-    // Translate Firebase error codes to Portuguese
     function getErrorMessage(code) {
         const messages = {
             'auth/invalid-email': 'E-mail inválido.',
@@ -45,7 +43,6 @@ const auth = firebase.auth();
         return messages[code] || 'Erro ao fazer login. Tente novamente.';
     }
 
-    // Form submit → Firebase signInWithEmailAndPassword
     if (loginForm) {
         loginForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -58,37 +55,53 @@ const auth = firebase.auth();
                     loginEmail.value.trim(),
                     loginPassword.value
                 );
-                // Auth state listener below will handle the transition
             } catch (err) {
                 loginError.textContent = getErrorMessage(err.code);
                 loginBtn.classList.remove('loading');
                 loginBtn.disabled = false;
-
-                // Shake animation on error
                 loginForm.style.animation = 'none';
-                loginForm.offsetHeight; // trigger reflow
+                loginForm.offsetHeight;
                 loginForm.style.animation = 'shake 0.4s ease';
             }
         });
     }
 
-    // Listen for auth state changes
+    let dashboardInitialized = false;
+
     auth.onAuthStateChanged((user) => {
         if (user) {
-            // User is signed in — hide login, show dashboard
             loginOverlay.classList.add('hidden');
             dashboard.style.display = '';
-            // Initialize dashboard after showing it
-            initDashboard();
+            updateUserUI(user);
+            if (!dashboardInitialized) {
+                dashboardInitialized = true;
+                initDashboard();
+            }
         } else {
-            // User is signed out — show login, hide dashboard
             loginOverlay.classList.remove('hidden');
             dashboard.style.display = 'none';
         }
     });
+
+    // Logout button
+    document.getElementById('logout-btn')?.addEventListener('click', () => {
+        auth.signOut();
+    });
 })();
 
-// ========== SHAKE ANIMATION (injected via JS for the login form) ==========
+// ========== UPDATE USER UI ==========
+function updateUserUI(user) {
+    const emailEl = document.getElementById('sidebar-email');
+    const avatarEl = document.getElementById('sidebar-avatar');
+    if (emailEl && user.email) {
+        emailEl.textContent = user.email;
+    }
+    if (avatarEl && user.email) {
+        avatarEl.textContent = user.email.charAt(0).toUpperCase();
+    }
+}
+
+// ========== SHAKE ANIMATION ==========
 (function injectShakeKeyframes() {
     const style = document.createElement('style');
     style.textContent = `
@@ -103,14 +116,54 @@ const auth = firebase.auth();
     document.head.appendChild(style);
 })();
 
-// ========== DASHBOARD LOGIC (original) ==========
+// ========== MOBILE MENU ==========
+(function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    function closeSidebar() {
+        sidebar?.classList.remove('open');
+        backdrop?.classList.remove('active');
+        setTimeout(() => { if (backdrop) backdrop.style.display = 'none'; }, 300);
+    }
+
+    hamburger?.addEventListener('click', () => {
+        const isOpen = sidebar.classList.contains('open');
+        if (isOpen) {
+            closeSidebar();
+        } else {
+            backdrop.style.display = 'block';
+            requestAnimationFrame(() => {
+                sidebar.classList.add('open');
+                backdrop.classList.add('active');
+            });
+        }
+    });
+
+    backdrop?.addEventListener('click', closeSidebar);
+
+    // Close sidebar on nav click (mobile)
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 900) closeSidebar();
+        });
+    });
+})();
+
+// ========== DASHBOARD LOGIC ==========
 function initDashboard() {
     const navItems = Array.from(document.querySelectorAll('.nav-item'));
-    const panels = document.querySelectorAll('.content-panel');
+    const progressBar = document.getElementById('nav-progress-bar');
     let currentIndex = 0;
     let isTransitioning = false;
 
-    // 1. Sidebar Navigation Logic
+    function updateProgress(index) {
+        if (!progressBar) return;
+        const pct = ((index + 1) / navItems.length) * 100;
+        progressBar.style.width = pct + '%';
+    }
+
     navItems.forEach((item, index) => {
         item.addEventListener('click', () => {
             if (isTransitioning) return;
@@ -122,16 +175,14 @@ function initDashboard() {
         if (index < 0 || index >= navItems.length || index === currentIndex) return;
 
         const targetId = navItems[index].getAttribute('data-target');
-        
-        // Update Sidebar UI
+
         navItems.forEach(i => i.classList.remove('active'));
         navItems[index].classList.add('active');
 
-        // Switch Panels
         switchPanel(targetId);
         currentIndex = index;
-        
-        // Scroll sidebar to keep active item in view if needed
+        updateProgress(index);
+
         navItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
@@ -143,7 +194,6 @@ function initDashboard() {
 
         isTransitioning = true;
 
-        // Transition Out
         anime({
             targets: currentPanel,
             opacity: 0,
@@ -152,21 +202,19 @@ function initDashboard() {
             easing: 'easeInQuad',
             complete: () => {
                 currentPanel.classList.remove('active');
+                currentPanel.scrollTop = 0;
                 nextPanel.classList.add('active');
-                
-                // Transition In
+                nextPanel.scrollTop = 0;
+
                 anime({
                     targets: nextPanel,
                     opacity: [0, 1],
                     translateY: [20, 0],
                     duration: 600,
                     easing: 'easeOutQuart',
-                    complete: () => {
-                        isTransitioning = false;
-                    }
+                    complete: () => { isTransitioning = false; }
                 });
 
-                // Stagger items inside the new panel
                 animatePanelItems(nextPanel);
             }
         });
@@ -174,29 +222,30 @@ function initDashboard() {
 
     function animatePanelItems(panel) {
         const items = panel.querySelectorAll('.card, .table-wrapper, h2, h3, p, tr, li');
-        
+
         anime({
             targets: items,
             opacity: [0, 1],
-            translateY: [20, 0],
-            delay: anime.stagger(40),
-            duration: 800,
+            translateY: [15, 0],
+            delay: anime.stagger(30, { start: 50 }),
+            duration: 700,
             easing: 'easeOutQuart'
         });
     }
 
-    // 2. Keyboard Navigation (Arrows)
+    // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
         if (isTransitioning) return;
-        
         if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+            e.preventDefault();
             setActiveIndex(currentIndex + 1);
         } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            e.preventDefault();
             setActiveIndex(currentIndex - 1);
         }
     });
 
-    // 3. Interactive Background Glows (Mouse follow)
+    // Background Glows follow mouse
     document.addEventListener('mousemove', (e) => {
         const glows = document.querySelectorAll('.glow');
         const x = e.clientX;
@@ -214,6 +263,7 @@ function initDashboard() {
         });
     });
 
-    // 5. Initial Animation
+    // Initial animation
+    updateProgress(0);
     animatePanelItems(document.querySelector('.content-panel.active'));
 }
